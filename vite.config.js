@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
+import { webfontDl } from 'vite-plugin-webfont-dl';
 
 export default defineConfig({
   build: {
@@ -11,4 +12,5 @@ export default defineConfig({
       },
     },
   },
+  plugins: [webfontDl()],
 });
