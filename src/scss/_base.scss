@@ -6,8 +6,6 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: $header-h;
@@ -83,10 +81,7 @@ img {
 a {
   text-decoration: none;
   color: inherit;
-  transition:
-    color $transition,
-    opacity $transition,
-    border-color $transition;
+  transition: color $transition, opacity $transition, border-color $transition;
 }
 
 .container {
@@ -124,11 +119,8 @@ a {
   font-weight: $fw-bold;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  transition:
-    background-color $transition,
-    color $transition,
-    box-shadow $transition,
-    transform 0.15s ease;
+  transition: background-color $transition, color $transition,
+    box-shadow $transition, transform 0.15s ease;
 }
 
 .btn--outline {
