@@ -3,22 +3,24 @@
 
   &__label {
     @extend .kicker;
+    margin-bottom: $sp-2;
   }
 
   &__title {
     margin-bottom: $sp-6;
     font-size: $fs-h2;
+    line-height: $lh-snug;
   }
 
-  &__cards {
-    display: flex;
-    flex-direction: column;
+  // единый grid вместо cards (так проще управлять extras)
+  &__grid {
+    display: grid;
     gap: $sp-5;
   }
 
   &__disclaimer {
     margin-top: $sp-2;
-    font-size: $fs-xs;
+    font-size: $fs-small;
     opacity: 0.6;
     font-style: italic;
   }
@@ -35,14 +37,13 @@
   flex-direction: column;
   gap: $sp-4;
 
-  transition:
-    transform $transition,
-    background-color $transition,
+  transition: transform $transition, background-color $transition,
     border-color $transition;
 
   &:hover {
     transform: translateY(-2px);
     background: $color-surface-2;
+    border-color: rgba(255, 255, 255, 0.16);
   }
 
   &__badge {
@@ -50,19 +51,19 @@
     top: 0;
     right: -1px;
     padding: 6px $sp-2;
-    font-size: $fs-xs;
-    font-weight: 600;
-    background: #121212;
+    font-size: $fs-small;
+    font-weight: $fw-semibold;
+
+    background: rgba(18, 18, 18, 0.9);
     border: 1px solid $color-border;
     border-top: none;
-    border-radius: 0 $r-3 0px $r-3;
+    border-radius: 0 $r-3 0 $r-3;
+    color: $color-text;
   }
 
   &__badge--featured {
     color: $color-accent;
-    top: -1px;
-    right: -1px;
-    border: 1px solid $color-accent-border;
+    border-color: $color-accent-border;
   }
 
   &__title {
@@ -71,17 +72,20 @@
     text-transform: none;
     letter-spacing: 0;
     color: $color-text;
+    margin: 0;
   }
 
   &__hook {
+    margin: 0;
     color: $color-muted;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
   &__list {
     list-style: none;
-    margin: $sp-4 0;
+    margin: 0;
     padding: 0;
+
     display: grid;
     gap: $sp-2;
 
@@ -97,7 +101,7 @@
         content: '';
         position: absolute;
         left: 0;
-        top: 4px;
+        top: 0.55em;
 
         width: 6px;
         height: 6px;
@@ -105,8 +109,8 @@
 
         background-color: $color-accent;
         opacity: 0.9;
-
         box-shadow: 0 0 0 4px rgba($color-accent, 0.12);
+        transform: translateY(-50%);
       }
     }
   }
@@ -146,14 +150,117 @@
   }
 }
 
-@media (min-width: $tablet) {
-  .formats__cards {
+// Extras как “широкая карточка”, но спокойнее, чтобы не спорила с форматами
+.extras-card {
+  position: relative;
+  border-radius: $r-3;
+  padding: $sp-6;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+
+  display: grid;
+  gap: $sp-5;
+
+  // мягкое акцентное пятно (живость)
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: radial-gradient(
+      900px 520px at 8% 15%,
+      rgba($color-accent, 0.12),
+      transparent 55%
+    );
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__kicker {
+    @extend .kicker;
+    margin-bottom: $sp-2;
+  }
+
+  &__title {
+    margin: 0 0 $sp-3;
+    font-size: $fs-h3;
+    text-transform: uppercase;
+    letter-spacing: $ls-title;
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-muted;
+    line-height: 1.6;
+    max-width: 58ch;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
     display: grid;
+    gap: $sp-3;
+
+    li {
+      position: relative;
+      padding-left: 18px;
+      color: $color-muted;
+      line-height: 1.6;
+      font-size: $fs-small;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: rgba($color-accent, 0.9);
+        transform: translateY(-50%);
+      }
+
+      span {
+        display: block;
+        margin-top: 4px;
+        font-size: $fs-small;
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .formats__grid {
     grid-template-columns: repeat(3, 1fr);
     gap: $sp-6;
   }
 
+  // 4-я карточка (Бункер) — во всю ширину, как у тебя было
   .format-card:nth-child(4) {
     grid-column: 1 / -1;
+  }
+
+  // extras — тоже во всю ширину, следующим блоком
+  .extras-card {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+
+    &__head {
+      padding-right: $sp-5;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    &__list {
+      padding-left: $sp-5;
+    }
   }
 }

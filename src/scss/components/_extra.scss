@@ -1,0 +1,52 @@
+.formats__extras {
+  margin-top: $sp-7;
+  padding: $sp-6;
+  border-radius: $r-3;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+
+  &-kicker {
+    @extend .kicker;
+    margin-bottom: $sp-2;
+  }
+
+  &-title {
+    font-size: $fs-h3;
+    margin-bottom: $sp-4;
+    text-transform: uppercase;
+  }
+
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    gap: $sp-3;
+
+    li {
+      position: relative;
+      padding-left: 18px;
+      color: $color-muted;
+      line-height: 1.6;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $color-accent;
+      }
+
+      span {
+        display: block;
+        font-size: $fs-small;
+        opacity: 0.75;
+      }
+    }
+  }
+}
