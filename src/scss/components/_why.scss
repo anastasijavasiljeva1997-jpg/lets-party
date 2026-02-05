@@ -1,0 +1,59 @@
+.why {
+  @extend .section;
+
+  &__label {
+    @extend .kicker;
+  }
+
+  &__title {
+    margin-bottom: $sp-6;
+    font-size: $fs-h2;
+    line-height: $lh-snug;
+    max-width: 720px;
+  }
+
+  &__grid {
+    display: grid;
+    gap: $sp-5;
+  }
+}
+
+.why-card {
+  padding: $sp-5;
+  border-radius: $r-3;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: background-color $transition, border-color $transition;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(236, 138, 57, 0.35);
+  }
+
+  &__title {
+    margin-bottom: $sp-2;
+    font-size: $fs-body;
+    font-weight: $fw-semibold;
+    color: $color-text;
+  }
+
+  &__text {
+    font-size: $fs-small;
+    line-height: 1.6;
+    color: $color-muted;
+  }
+}
+
+@media (min-width: $tablet) {
+  .why__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: $desktop) {
+  .why__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

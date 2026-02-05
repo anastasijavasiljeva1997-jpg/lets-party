@@ -66,6 +66,11 @@
     padding-right: 2.5em;
     line-height: $lh-base;
     font-size: 15px;
+
+    strong {
+      color: $color-text;
+      font-weight: $fw-semibold;
+    }
   }
 
   &__btn {
