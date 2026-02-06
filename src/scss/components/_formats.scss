@@ -37,7 +37,9 @@
   flex-direction: column;
   gap: $sp-4;
 
-  transition: transform $transition, background-color $transition,
+  transition:
+    transform $transition,
+    background-color $transition,
     border-color $transition;
 
   &:hover {
@@ -150,7 +152,7 @@
   }
 }
 
-// Extras как “широкая карточка”, но спокойнее, чтобы не спорила с форматами
+// Extras
 .extras-card {
   position: relative;
   border-radius: $r-3;
@@ -213,7 +215,7 @@
       padding-left: 18px;
       color: $color-muted;
       line-height: 1.6;
-      font-size: $fs-small;
+      font-size: $fs-body;
 
       &::before {
         content: '';

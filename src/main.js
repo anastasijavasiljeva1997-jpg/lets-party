@@ -1,7 +1,8 @@
 import './scss/main.scss';
 import Swiper from 'swiper';
-import { Navigation, Pagination, Keyboard } from 'swiper/modules';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const headerEl = document.querySelector('.header');
@@ -124,62 +125,46 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // swiper
 
-const galleryImages = [
-  { src: '/gallery/1.jpg', alt: 'Let’s Party' },
-  { src: '/gallery/2.jpg', alt: 'Let’s Party — атмосфера' },
-  { src: '/gallery/3.jpg', alt: 'Let’s Party — эмоции гостей' },
-  { src: '/gallery/4.jpg', alt: 'Let’s Party — ведущие' },
-];
+function markPortraitImages(root) {
+  const imgs = root.querySelectorAll('.about__slide-img');
 
-// const mountGallerySlides = () => {
-//   const wrapper = document.querySelector('.gallery__swiper .swiper-wrapper');
-//   if (!wrapper) return;
+  imgs.forEach((img) => {
+    const apply = () => {
+      // если картинка вертикальная — показываем её "contain", чтобы не резало лица
+      const isPortrait = img.naturalHeight > img.naturalWidth;
+      img.classList.toggle('is-contain', isPortrait);
+    };
 
-//   wrapper.innerHTML = galleryImages
-//     .map(
-//       (img) => `
-// <div class="swiper-slide gallery__slide">
-//   <img
-//     class="gallery__img"
-//     src="${img.src}"
-//     alt="${img.alt}"
-//     loading="lazy"
-//     decoding="async"
-//   />
-// </div>
-//       `
-//     )
-//     .join('');
-// };
+    if (img.complete) apply();
+    else img.addEventListener('load', apply, { once: true });
+  });
+}
 
-const initGallerySwiper = () => {
-  const el = document.querySelector('.gallery__swiper');
+export function initAboutSlider() {
+  const el = document.querySelector('.about__slider');
   if (!el) return;
 
-  new Swiper('.gallery__swiper', {
-    modules: [Navigation, Pagination, Keyboard],
-    slidesPerView: 1,
-    spaceBetween: 12,
-    speed: 350,
+  markPortraitImages(el);
+
+  // eslint-disable-next-line no-new
+  new Swiper(el, {
+    modules: [Navigation, Pagination, A11y],
     loop: true,
-    grabCursor: true,
-    keyboard: { enabled: true },
+    speed: 650,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    a11y: true,
 
     navigation: {
-      prevEl: '.gallery__nav--prev',
-      nextEl: '.gallery__nav--next',
+      nextEl: el.querySelector('.about__nav--next'),
+      prevEl: el.querySelector('.about__nav--prev'),
     },
 
     pagination: {
-      el: '.gallery__pagination',
+      el: el.querySelector('.about__pagination'),
       clickable: true,
     },
-
-    breakpoints: {
-      768: { slidesPerView: 1, spaceBetween: 16 },
-      1200: { slidesPerView: 1, spaceBetween: 18 },
-    },
   });
-};
+}
 
-initGallerySwiper();
+initAboutSlider();
