@@ -125,45 +125,43 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 // swiper
 
 const galleryImages = [
-  { src: '/gallery/1.jpg', alt: 'Let’s Party — мероприятие' },
+  { src: '/gallery/1.jpg', alt: 'Let’s Party' },
   { src: '/gallery/2.jpg', alt: 'Let’s Party — атмосфера' },
   { src: '/gallery/3.jpg', alt: 'Let’s Party — эмоции гостей' },
   { src: '/gallery/4.jpg', alt: 'Let’s Party — ведущие' },
 ];
 
-const mountGallerySlides = () => {
-  const wrapper = document.querySelector('.gallery__swiper .swiper-wrapper');
-  if (!wrapper) return;
+// const mountGallerySlides = () => {
+//   const wrapper = document.querySelector('.gallery__swiper .swiper-wrapper');
+//   if (!wrapper) return;
 
-  wrapper.innerHTML = galleryImages
-    .map(
-      (img) => `
-        <div class="swiper-slide gallery__slide">
-          <img
-            class="gallery__img"
-            src="${img.src}"
-            alt="${img.alt}"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-      `
-    )
-    .join('');
-};
+//   wrapper.innerHTML = galleryImages
+//     .map(
+//       (img) => `
+// <div class="swiper-slide gallery__slide">
+//   <img
+//     class="gallery__img"
+//     src="${img.src}"
+//     alt="${img.alt}"
+//     loading="lazy"
+//     decoding="async"
+//   />
+// </div>
+//       `
+//     )
+//     .join('');
+// };
 
 const initGallerySwiper = () => {
   const el = document.querySelector('.gallery__swiper');
   if (!el) return;
-
-  mountGallerySlides();
 
   new Swiper('.gallery__swiper', {
     modules: [Navigation, Pagination, Keyboard],
     slidesPerView: 1,
     spaceBetween: 12,
     speed: 350,
-    loop: galleryImages.length > 3, // чтобы не было тупости на 2 фотках
+    loop: true,
     grabCursor: true,
     keyboard: { enabled: true },
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -36,10 +36,16 @@
               <a class="nav__link" href="#formats">Форматы</a>
             </li>
             <li class="nav__item">
+              <a class="nav__link" href="#extras">Дополнительно</a>
+            </li>
+            <li class="nav__item">
               <a class="nav__link" href="#reviews">Отзывы</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#gallery">Галерея</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#booking">Контакты</a>
@@ -83,8 +89,10 @@
           <ul class="menu__list">
             <li><a class="menu__link" href="#about">О нас</a></li>
             <li><a class="menu__link" href="#formats">Форматы</a></li>
+            <li><a class="menu__link" href="#extras">Дополнительно</a></li>
             <li><a class="menu__link" href="#reviews">Отзывы</a></li>
             <li><a class="menu__link" href="#faq">FAQ</a></li>
+            <li><a class="menu__link" href="#gallery">Галерея</a></li>
             <li><a class="menu__link" href="#booking">Контакты</a></li>
           </ul>
         </nav>
@@ -293,7 +301,6 @@
               </a>
             </article>
 
-            <!-- EXTRAS: выглядит как “широкая карточка” внутри сетки -->
             <article class="extras-card" id="extras">
               <div class="extras-card__head">
                 <p class="extras-card__kicker">Дополнительно</p>
@@ -809,7 +816,45 @@
             aria-label="Фотографии с мероприятий"
           >
             <div class="swiper-wrapper">
-              <!-- Слайды добавим JS-ом, чтобы менять фотки было проще -->
+              <div class="swiper-slide gallery__slide">
+                <img
+                  class="gallery__img"
+                  src="/src/assets/gallery/1.jpg"
+                  alt="${img.alt}"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              <div class="swiper-slide gallery__slide">
+                <img
+                  class="gallery__img"
+                  src="/src/assets/gallery/2.jpg"
+                  alt="${img.alt}"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              <div class="swiper-slide gallery__slide">
+                <img
+                  class="gallery__img"
+                  src="/src/assets/gallery/3.jpg"
+                  alt="${img.alt}"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              <div class="swiper-slide gallery__slide">
+                <img
+                  class="gallery__img"
+                  src="/src/assets/gallery/4.jpg"
+                  alt="${img.alt}"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </div>
 
             <div class="gallery__pagination"></div>
