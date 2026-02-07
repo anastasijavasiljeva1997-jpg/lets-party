@@ -1,0 +1,89 @@
+backend:
+  name: git-gateway
+  branch: cms
+
+media_folder: 'public/gallery'
+public_folder: '/gallery'
+
+collections:
+  - name: 'content'
+    label: 'Контент (Локализация)'
+    files:
+      - file: 'content/ru.json'
+        label: 'Русская версия'
+        name: 'ru'
+        fields: &fields
+          - {
+              label: 'Цены',
+              name: 'prices',
+              widget: 'object',
+              fields:
+                [
+                  {
+                    label: 'Party Mafia',
+                    name: 'party_mafia',
+                    widget: 'string',
+                  },
+                  {
+                    label: 'Bunker Immersive',
+                    name: 'bunker_immersive',
+                    widget: 'string',
+                  },
+                  {
+                    label: 'Classic Mafia',
+                    name: 'classic_mafia',
+                    widget: 'string',
+                  },
+                  { label: 'Bunker', name: 'bunker', widget: 'string' },
+                ],
+            }
+          - {
+              label: 'FAQ',
+              name: 'faq',
+              widget: 'list',
+              fields:
+                [
+                  { label: 'Вопрос', name: 'question', widget: 'string' },
+                  { label: 'Ответ', name: 'answer', widget: 'text' },
+                ],
+            }
+          - {
+              label: 'Отзывы',
+              name: 'reviews',
+              widget: 'list',
+              fields:
+                [
+                  {
+                    label: 'Текст (выделяй **жирным**)',
+                    name: 'text',
+                    widget: 'markdown',
+                    buttons: ['bold'],
+                    editor_components: [],
+                  },
+                  {
+                    label: 'Скриншот',
+                    name: 'image',
+                    widget: 'image',
+                    choose_url: false,
+                  },
+                  { label: 'Alt текст', name: 'image_alt', widget: 'string' },
+                ],
+            }
+          - {
+              label: 'Галерея',
+              name: 'gallery',
+              widget: 'list',
+              fields:
+                [
+                  { label: 'Фото', name: 'image', widget: 'image' },
+                  { label: 'Подпись', name: 'caption', widget: 'string' },
+                ],
+            }
+      - file: 'content/en.json'
+        label: 'English Version'
+        name: 'en'
+        fields: *fields
+      - file: 'content/lv.json'
+        label: 'Latviešu versija'
+        name: 'lv'
+        fields: *fields

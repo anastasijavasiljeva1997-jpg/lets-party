@@ -1,0 +1,100 @@
+{
+  "prices": {
+    "party_mafia": "no 80 € / stundā",
+    "bunker_immersive": "no 100 € / stundā",
+    "classic_mafia": "no 60 € / stundā",
+    "bunker": "no 60 € / stundā"
+  },
+  "reviews": [
+    {
+      "text": "“Man ļoti patīk jūsu formāts un tas, kā jūs vadāt spēles, **tik daudz smieklu 😂 mums pat viena mamma piedāvāja citu vadītāju, jo cena bija zemāka, bet Eļa tāpat kā es — nē, mēs gribam Nastju 😃**”",
+      "image": "/proofs/proof-3.PNG",
+      "image_alt": "Telegram atsauksmes ekrānuzņēmums"
+    },
+    {
+      "text": "“Spēle izdevās super forša 🔥🔥 Visi aktīvi spēlēja, **pat tie, kas spēlēja pirmo reizi** 😊 Atmosfēra bija uzlādēta un ļoti dzīva, īpaši tēma ar lomām bija vienkārši uguns, visi tiešām iejutās tēlos! 🤣🤣 Liels paldies! 💗 vēl nāksim pie tevis uz spēli 🥰”",
+      "image": "/proofs/proof-8.PNG",
+      "image_alt": "Telegram atsauksmes ekrānuzņēmums"
+    },
+    {
+      "text": "“Vakar mums bija korporatīvais pasākums, nevarēju uzreiz atbildēt 🙏 Liels paldies par jūsu darbu! **Diāna ir brīnišķīga, mums bija ļoti jautri kopā. 🥳 Ļoti priecājos ar tevi sadarboties un ir patīkami, ka blakus vienmēr ir atbildīgi cilvēki ❤️**”",
+      "image": "/proofs/proof-5.PNG",
+      "image_alt": "Telegram atsauksmes ekrānuzņēmums"
+    },
+    {
+      "text": "“Paldies, ka pieņēmāt savā siltajā kompānijā tos nepieredzējušos, **kas spēlē pirmās reizes 🤗☀️**”",
+      "image": "/proofs/proof-13.PNG",
+      "image_alt": "Telegram atsauksmes ekrānuzņēmums"
+    },
+    {
+      "text": "“Patiešām **ar katru reizi arvien foršāk un foršāk!** Iejusties mafijas lomā kļūst arvien vieglāk un vieglāk 😂🔥”",
+      "image": "/proofs/proof-11.PNG",
+      "image_alt": "Telegram atsauksmes ekrānuzņēmums"
+    },
+    {
+      "text": "“Diāna, čau! **Paldies par brīnišķīgo, jautro vakaru!** Ceru, ka mana trokšņainā kompānija nesagādāja problēmas pasākuma laikā:)”",
+      "image": "/proofs/proof-14.PNG",
+      "image_alt": "Telegram atsauksmes ekrānuzņēmums"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Cik ilgi ilgst spēle?",
+      "answer": "Atkarīgs no dalībnieku skaita un noskaņojuma. Mēs vienmēr precizējam, vai klientiem jau ir pieredze un kādas ir vēlmes šim vakaram. Vadītāji cenšas pielāgoties laika rāmim, ja tāds ir norādīts."
+    },
+    {
+      "question": "Kādam viesu skaitam ir paredzēta mafijas spēle?",
+      "answer": "No 6 līdz 25 personām. Mēs iepriekš saskaņojam šo punktu un pārrunājam spēles dinamiku."
+    },
+    {
+      "question": "Kādās valodās tiek vadīti pasākumi?",
+      "answer": "Latviešu, angļu un krievu valodās. Iespējama arī bilingvāla vadīšana."
+    },
+    {
+      "question": "Cik spēlētāju var spēlēt bunkuru?",
+      "answer": "No 5 līdz 20 personām. Iepriekš saskaņojam šo punktu un pārrunājam spēles dinamiku."
+    },
+    {
+      "question": "Vai ceļa izdevumi ir iekļauti cenā?",
+      "answer": "Nē, ceļa izdevumi tiek apmaksāti atsevišķi atkarībā no atrašanās vietas. Rīgā ņemam samaksu tikai par autostāvvietu."
+    },
+    {
+      "question": "Vai vadāt spēles bērniem?",
+      "answer": "Jā, sākot no 8 gadu vecuma. Bet, ja nepieciešamas programmas jaunākiem bērniem, mums ir partneri, un mēs varam palīdzēt noorganizēt arī bērnu ballīti."
+    }
+  ],
+  "gallery": [
+    { "image": "/gallery/1.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/2.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/3.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/4.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/5.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/6.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/7.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/8.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/9.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/10.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/11.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/12.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/13.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/14.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/15.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/16.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/17.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/18.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/19.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/20.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/21.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/22.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/23.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/24.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/25.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/26.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/27.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/28.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/29.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/30.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/31.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/32.jpg", "caption": "Let’s Party • Dynasty Events" }
+  ]
+}

@@ -125,46 +125,61 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // swiper
 
+async function initDynamicGallery() {
+  const wrapper = document.getElementById('gallery-wrapper');
+  if (!wrapper) return;
+
+  const lang = document.documentElement.lang || 'ru';
+  const contentPath =
+    lang === 'ru' ? '/content/ru.json' : `/content/${lang}.json`;
+
+  try {
+    const response = await fetch(contentPath);
+    const data = await response.json();
+
+    wrapper.innerHTML = data.gallery
+      .map(
+        (item) => `
+      <div class="swiper-slide">
+        <figure class="about__frame">
+          <img class="about__slide-img" src="${item.image}" alt="${item.caption}" loading="lazy" decoding="async" />
+          <figcaption class="about__cap">${item.caption}</figcaption>
+        </figure>
+      </div>
+    `,
+      )
+      .join('');
+
+    markPortraitImages(wrapper);
+
+    // 4. Инициализируем Swiper
+    new Swiper('.about__slider', {
+      modules: [Navigation, Pagination, A11y],
+      loop: true,
+      speed: 650,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      navigation: {
+        nextEl: '.about__nav--next',
+        prevEl: '.about__nav--prev',
+      },
+    });
+  } catch (err) {
+    console.error('Ошибка загрузки галереи:', err);
+  }
+}
+
 function markPortraitImages(root) {
   const imgs = root.querySelectorAll('.about__slide-img');
-
   imgs.forEach((img) => {
     const apply = () => {
-      // если картинка вертикальная — показываем её "contain", чтобы не резало лица
       const isPortrait = img.naturalHeight > img.naturalWidth;
       img.classList.toggle('is-contain', isPortrait);
     };
-
     if (img.complete) apply();
     else img.addEventListener('load', apply, { once: true });
   });
 }
 
-export function initAboutSlider() {
-  const el = document.querySelector('.about__slider');
-  if (!el) return;
-
-  markPortraitImages(el);
-
-  // eslint-disable-next-line no-new
-  new Swiper(el, {
-    modules: [Navigation, Pagination, A11y],
-    loop: true,
-    speed: 650,
-    slidesPerView: 1,
-    spaceBetween: 16,
-    a11y: true,
-
-    navigation: {
-      nextEl: el.querySelector('.about__nav--next'),
-      prevEl: el.querySelector('.about__nav--prev'),
-    },
-
-    pagination: {
-      el: el.querySelector('.about__pagination'),
-      clickable: true,
-    },
-  });
-}
-
-initAboutSlider();
+// Запуск
+initDynamicGallery();

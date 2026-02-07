@@ -1,0 +1,100 @@
+{
+  "prices": {
+    "party_mafia": "from 80 € / hour",
+    "bunker_immersive": "from 100 € / hour",
+    "classic_mafia": "from 60 € / hour",
+    "bunker": "from 60 € / hour"
+  },
+  "reviews": [
+    {
+      "text": "“I really love your format and how you run the games, **so much laughter 😂 one mother even suggested another host because the price was lower, but Elya, like me, said — no, we want Nastya 😃**”",
+      "image": "/proofs/proof-3.PNG",
+      "image_alt": "Telegram review screenshot"
+    },
+    {
+      "text": "“The game turned out super cool 🔥🔥 Everyone played actively, **even those playing for the first time** 😊 The atmosphere was charged and very lively, especially the character roles were fire, everyone really got into character! 🤣🤣 Thank you so much! 💗 we'll come to your game again 🥰”",
+      "image": "/proofs/proof-8.PNG",
+      "image_alt": "Telegram review screenshot"
+    },
+    {
+      "text": "“We had a corporate event yesterday, couldn't reply right away 🙏 Thank you so much for your work! **Diana is wonderful, we had a lot of fun together. 🥳 Very glad to cooperate with you and it's nice to always have responsible people around ❤️**”",
+      "image": "/proofs/proof-5.PNG",
+      "image_alt": "Telegram review screenshot"
+    },
+    {
+      "text": "“Thank you for welcoming into your warm company those inexperienced ones **who are playing for the first time 🤗☀️**”",
+      "image": "/proofs/proof-13.PNG",
+      "image_alt": "Telegram review screenshot"
+    },
+    {
+      "text": "“Truly **it gets cooler and cooler every time!** Getting into the Mafia role is becoming easier and easier 😂🔥”",
+      "image": "/proofs/proof-11.PNG",
+      "image_alt": "Telegram review screenshot"
+    },
+    {
+      "text": "“Diana, hi! **Thanks for a wonderful, fun evening!** I hope my noisy company didn't cause any problems during the event:)”",
+      "image": "/proofs/proof-14.PNG",
+      "image_alt": "Telegram review screenshot"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How long does the game last?",
+      "answer": "It depends on the number of participants and their mood. We always clarify with clients whether they have prior experience and what their expectations are. Hosts try to adapt to the timing if one has been specified."
+    },
+    {
+      "question": "What is the guest count for a Mafia game?",
+      "answer": "From 6 to 25 players. We discuss this in advance to ensure the best game dynamics."
+    },
+    {
+      "question": "In what languages are the events conducted?",
+      "answer": "In Latvian, English, and Russian. Bilingual events are also possible."
+    },
+    {
+      "question": "How many players can play Bunker?",
+      "answer": "From 5 to 20 players. We discuss the details and dynamics in advance."
+    },
+    {
+      "question": "Are travel expenses included in the price?",
+      "answer": "No, travel expenses are paid separately depending on the location. In Riga, we only charge for parking."
+    },
+    {
+      "question": "Do you run games for children?",
+      "answer": "Yes, starting from 8 years old. If you need programs for younger children, we have partners and can help you organize a kids' party."
+    }
+  ],
+  "gallery": [
+    { "image": "/gallery/1.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/2.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/3.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/4.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/5.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/6.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/7.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/8.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/9.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/10.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/11.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/12.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/13.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/14.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/15.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/16.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/17.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/18.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/19.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/20.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/21.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/22.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/23.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/24.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/25.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/26.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/27.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/28.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/29.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/30.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/31.jpg", "caption": "Let’s Party • Dynasty Events" },
+    { "image": "/gallery/32.jpg", "caption": "Let’s Party • Dynasty Events" }
+  ]
+}
