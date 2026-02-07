@@ -1,6 +1,6 @@
 {
   "prices": {
-    "party_mafia": "от 100 € / час",
+    "party_mafia": "от 80 € / час",
     "bunker_immersive": "от 100 € / час",
     "classic_mafia": "от 60 € / час",
     "bunker": "от 60 € / час"
@@ -35,11 +35,6 @@
       "text": "“Диана, привет! **Спасибо за прекрасный, весёлый вечер!** Я надеюсь, что моя шумная компания не создавала проблем в проведении мероприятия:)”",
       "image": "/proofs/proof-14.PNG",
       "image_alt": "Скриншот отзыва из Telegram"
-    },
-    {
-      "image": "/gallery/снимок-экрана-от-2026-02-06-17-29-22.png",
-      "text": "обычный **жирный**",
-      "image_alt": "отзывв"
     }
   ],
   "faq": [
@@ -66,19 +61,15 @@
     {
       "question": "Вы проводите игры детям?",
       "answer": "Да, начиная от 8 лет. Но если нужны программы для более маленьких деток у нас есть партнеры и мы можем помочь вам с организацией и детского праздника."
-    },
-    {
-      "question": "Вопрос",
-      "answer": "Ответ!!!"
     }
   ],
   "gallery": [
     {
-      "image": "/gallery/1.jpg",
+      "image": "/gallery/2.jpg",
       "caption": "Let’s Party • Dynasty Events"
     },
     {
-      "image": "/gallery/2.jpg",
+      "image": "/gallery/1.jpg",
       "caption": "Let’s Party • Dynasty Events"
     },
     {
