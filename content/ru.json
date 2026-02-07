@@ -1,6 +1,6 @@
 {
   "prices": {
-    "party_mafia": "от 80 € / час",
+    "party_mafia": "от 0 € / час",
     "bunker_immersive": "от 100 € / час",
     "classic_mafia": "от 60 € / час",
     "bunker": "от 60 € / час"
@@ -64,37 +64,133 @@
     }
   ],
   "gallery": [
-    { "image": "/gallery/1.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/2.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/3.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/4.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/5.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/6.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/7.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/8.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/9.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/10.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/11.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/12.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/13.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/14.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/15.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/16.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/17.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/18.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/19.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/20.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/21.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/22.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/23.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/24.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/25.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/26.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/27.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/28.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/29.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/30.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/31.jpg", "caption": "Let’s Party • Dynasty Events" },
-    { "image": "/gallery/32.jpg", "caption": "Let’s Party • Dynasty Events" }
+    {
+      "image": "/gallery/1.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/2.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/3.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/4.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/5.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/6.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/7.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/8.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/9.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/10.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/11.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/12.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/13.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/14.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/15.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/16.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/17.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/18.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/19.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/20.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/21.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/22.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/23.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/24.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/25.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/26.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/27.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/28.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/29.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/30.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/31.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    },
+    {
+      "image": "/gallery/32.jpg",
+      "caption": "Let’s Party • Dynasty Events"
+    }
   ]
 }
