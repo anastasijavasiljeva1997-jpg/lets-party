@@ -183,7 +183,7 @@
     <div class="formats__grid">
       <article class="format-card format-card--featured">
         <div class="format-card__badge format-card__badge--featured">
-          no 80 € / stundā
+          {{prices.party_mafia}}
         </div>
         <h3 class="format-card__title">Party Mafia</h3>
         <p class="format-card__hook">Pilnvērtīgs scenārijs jūsu svētku programmai sākot no 3 stundām.</p>
@@ -198,7 +198,7 @@
 
       <article class="format-card format-card--featured">
         <div class="format-card__badge format-card__badge--featured">
-          no 100 € / stundā
+          {{prices.bunker_immersive}}
         </div>
         <h3 class="format-card__title">Bunker: Immersive Experience</h3>
         <p class="format-card__hook">Iegrimšana sižetā vēl pirms spēles sākuma. Jaunums tirgū!</p>
@@ -213,7 +213,7 @@
       </article>
 
       <article class="format-card">
-        <div class="format-card__badge">no 60 € / stundā</div>
+        <div class="format-card__badge">{{prices.classic_mafia}}</div>
         <h3 class="format-card__title">Klasiskā mafija</h3>
         <p class="format-card__hook">Pazīstams formāts jebkurai kompānijai</p>
         <ul class="format-card__list">
@@ -228,7 +228,7 @@
       </article>
 
       <article class="format-card">
-        <div class="format-card__badge">no 60 € / stundā</div>
+        <div class="format-card__badge">{{prices.bunker}}</div>
         <h3 class="format-card__title">Bunkurs</h3>
         <p class="format-card__hook">Spēle uz loģiku un diskusijām</p>
         <ul class="format-card__list">
@@ -417,48 +417,7 @@
           <h2 class="reviews__title">Klientu atsauksmes</h2>
 
           <div class="reviews__track" aria-label="Отзывы">
-  
-      <article class="review-card">
-        <p class="review-card__text">“Man ļoti patīk jūsu formāts un tas, kā jūs vadāt spēles, <strong>tik daudz smieklu 😂 mums pat viena mamma piedāvāja citu vadītāju, jo cena bija zemāka, bet Eļa tāpat kā es — nē, mēs gribam Nastju 😃</strong>”</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-3.PNG" data-proof-alt="Telegram atsauksmes ekrānuzņēmums">
-          Rādīt oriģinālu
-        </button>
-      </article>
-
-      <article class="review-card">
-        <p class="review-card__text">“Spēle izdevās super forša 🔥🔥 Visi aktīvi spēlēja, <strong>pat tie, kas spēlēja pirmo reizi</strong> 😊 Atmosfēra bija uzlādēta un ļoti dzīva, īpaši tēma ar lomām bija vienkārši uguns, visi tiešām iejutās tēlos! 🤣🤣 Liels paldies! 💗 vēl nāksim pie tevis uz spēli 🥰”</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-8.PNG" data-proof-alt="Telegram atsauksmes ekrānuzņēmums">
-          Rādīt oriģinālu
-        </button>
-      </article>
-
-      <article class="review-card">
-        <p class="review-card__text">“Vakar mums bija korporatīvais pasākums, nevarēju uzreiz atbildēt 🙏 Liels paldies par jūsu darbu! <strong>Diāna ir brīnišķīga, mums bija ļoti jautri kopā. 🥳 Ļoti priecājos ar tevi sadarboties un ir patīkami, ka blakus vienmēr ir atbildīgi cilvēki ❤️</strong>”</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-5.PNG" data-proof-alt="Telegram atsauksmes ekrānuzņēmums">
-          Rādīt oriģinālu
-        </button>
-      </article>
-
-      <article class="review-card">
-        <p class="review-card__text">“Paldies, ka pieņēmāt savā siltajā kompānijā tos nepieredzējušos, <strong>kas spēlē pirmās reizes 🤗☀️</strong>”</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-13.PNG" data-proof-alt="Telegram atsauksmes ekrānuzņēmums">
-          Rādīt oriģinālu
-        </button>
-      </article>
-
-      <article class="review-card">
-        <p class="review-card__text">“Patiešām <strong>ar katru reizi arvien foršāk un foršāk!</strong> Iejusties mafijas lomā kļūst arvien vieglāk un vieglāk 😂🔥”</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-11.PNG" data-proof-alt="Telegram atsauksmes ekrānuzņēmums">
-          Rādīt oriģinālu
-        </button>
-      </article>
-
-      <article class="review-card">
-        <p class="review-card__text">“Diāna, čau! <strong>Paldies par brīnišķīgo, jautro vakaru!</strong> Ceru, ka mana trokšņainā kompānija nesagādāja problēmas pasākuma laikā:)”</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-14.PNG" data-proof-alt="Telegram atsauksmes ekrānuzņēmums">
-          Rādīt oriģinālu
-        </button>
-      </article>
+  {{reviews_items}}
 </div>
         </div>
 
@@ -491,72 +450,7 @@
           <h2 class="faq__title">FAQ</h2>
 
 <div class="accordion accordion--faq" id="faq-accordion">
-      
-    <details class="acc-faq acc-trigger">
-      <summary class="acc-faq__summary">
-        Cik ilgi ilgst spēle?
-        <span class="acc-faq__icon" aria-hidden="true">+</span>
-      </summary>
-      <div class="acc-faq__panel">
-        <div class="acc-faq__content"><p>Atkarīgs no dalībnieku skaita un noskaņojuma. Mēs vienmēr precizējam, vai klientiem jau ir pieredze un kādas ir vēlmes šim vakaram. Vadītāji cenšas pielāgoties laika rāmim, ja tāds ir norādīts.</p></div>
-      </div>
-    </details>
-  
-
-    <details class="acc-faq acc-trigger">
-      <summary class="acc-faq__summary">
-        Kādam viesu skaitam ir paredzēta mafijas spēle?
-        <span class="acc-faq__icon" aria-hidden="true">+</span>
-      </summary>
-      <div class="acc-faq__panel">
-        <div class="acc-faq__content"><p>No 6 līdz 25 personām. Mēs iepriekš saskaņojam šo punktu un pārrunājam spēles dinamiku.</p></div>
-      </div>
-    </details>
-  
-
-    <details class="acc-faq acc-trigger">
-      <summary class="acc-faq__summary">
-        Kādās valodās tiek vadīti pasākumi?
-        <span class="acc-faq__icon" aria-hidden="true">+</span>
-      </summary>
-      <div class="acc-faq__panel">
-        <div class="acc-faq__content"><p>Latviešu, angļu un krievu valodās. Iespējama arī bilingvāla vadīšana.</p></div>
-      </div>
-    </details>
-  
-
-    <details class="acc-faq acc-trigger">
-      <summary class="acc-faq__summary">
-        Cik spēlētāju var spēlēt bunkuru?
-        <span class="acc-faq__icon" aria-hidden="true">+</span>
-      </summary>
-      <div class="acc-faq__panel">
-        <div class="acc-faq__content"><p>No 5 līdz 20 personām. Iepriekš saskaņojam šo punktu un pārrunājam spēles dinamiku.</p></div>
-      </div>
-    </details>
-  
-
-    <details class="acc-faq acc-trigger">
-      <summary class="acc-faq__summary">
-        Vai ceļa izdevumi ir iekļauti cenā?
-        <span class="acc-faq__icon" aria-hidden="true">+</span>
-      </summary>
-      <div class="acc-faq__panel">
-        <div class="acc-faq__content"><p>Nē, ceļa izdevumi tiek apmaksāti atsevišķi atkarībā no atrašanās vietas. Rīgā ņemam samaksu tikai par autostāvvietu.</p></div>
-      </div>
-    </details>
-  
-
-    <details class="acc-faq acc-trigger">
-      <summary class="acc-faq__summary">
-        Vai vadāt spēles bērniem?
-        <span class="acc-faq__icon" aria-hidden="true">+</span>
-      </summary>
-      <div class="acc-faq__panel">
-        <div class="acc-faq__content"><p>Jā, sākot no 8 gadu vecuma. Bet, ja nepieciešamas programmas jaunākiem bērniem, mums ir partneri, un mēs varam palīdzēt noorganizēt arī bērnu ballīti.</p></div>
-      </div>
-    </details>
-  
+      {{faq_items}}
     </div>
         </div>
       </section>
