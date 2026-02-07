@@ -1,15 +1,18 @@
 backend:
   name: git-gateway
-  branch: cms
+  branch: cms # Твоя рабочая ветка
 
+# Где физически лежат картинки в репозитории
 media_folder: 'public/gallery'
+# Какой путь будет записываться в JSON (чтобы браузер их видел как /gallery/...)
 public_folder: '/gallery'
 
 collections:
   - name: 'content'
     label: 'Контент (Локализация)'
     files:
-      - file: 'content/ru.json'
+      # Везде добавили префикс public/, так как файлы теперь там
+      - file: 'public/content/ru.json'
         label: 'Русская версия'
         name: 'ru'
         fields: &fields
@@ -47,12 +50,7 @@ collections:
                   { label: 'Ответ', name: 'answer', widget: 'text' },
                 ],
             }
-          - {
-              label: 'Отзывы',
-              name: 'reviews',
-              widget: 'list',
-              fields:
-                [
+          - { label: 'Отзывы', name: 'reviews', widget: 'list', fields: [
                   {
                     label: 'Текст (выделяй **жирным**)',
                     name: 'text',
@@ -61,14 +59,15 @@ collections:
                     editor_components: [],
                   },
                   {
-                    label: 'Скриншот',
+                    label: 'Скриншот (из папки proofs)',
                     name: 'image',
                     widget: 'image',
+                    # Для отзывов мы обычно используем папку proofs,
+                    # если хочешь, чтобы они летели в общую галерею — оставь просто widget: image
                     choose_url: false,
                   },
                   { label: 'Alt текст', name: 'image_alt', widget: 'string' },
-                ],
-            }
+                ] }
           - {
               label: 'Галерея',
               name: 'gallery',
@@ -79,11 +78,11 @@ collections:
                   { label: 'Подпись', name: 'caption', widget: 'string' },
                 ],
             }
-      - file: 'content/en.json'
+      - file: 'public/content/en.json'
         label: 'English Version'
         name: 'en'
         fields: *fields
-      - file: 'content/lv.json'
+      - file: 'public/content/lv.json'
         label: 'Latviešu versija'
         name: 'lv'
         fields: *fields
