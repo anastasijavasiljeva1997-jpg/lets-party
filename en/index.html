@@ -167,7 +167,7 @@
 
             <div class="about__media">
   <div class="about__slider swiper" aria-label="Let’s Party Gallery">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper" id="gallery-wrapper">
       </div>
     </div>
 
@@ -185,7 +185,7 @@
     <div class="formats__grid">
       <article class="format-card format-card--featured">
         <div class="format-card__badge format-card__badge--featured">
-          {{prices.party_mafia}}
+          from 80 € / hour
         </div>
         <h3 class="format-card__title">Party Mafia</h3>
         <p class="format-card__hook">A full-scale script for your holiday program starting from 3 hours.</p>
@@ -200,7 +200,7 @@
 
       <article class="format-card format-card--featured">
         <div class="format-card__badge format-card__badge--featured">
-          {{prices.bunker_immersive}}
+          from 100 € / hour
         </div>
         <h3 class="format-card__title">Bunker: Immersive Experience</h3>
         <p class="format-card__hook">Dive into the story even before the game begins. Market novelty!</p>
@@ -215,7 +215,7 @@
       </article>
 
       <article class="format-card">
-        <div class="format-card__badge">{{prices.classic_mafia}}</div>
+        <div class="format-card__badge">from 60 € / hour</div>
         <h3 class="format-card__title">Classic Mafia</h3>
         <p class="format-card__hook">A familiar format for any group</p>
         <ul class="format-card__list">
@@ -230,7 +230,7 @@
       </article>
 
       <article class="format-card">
-        <div class="format-card__badge">{{prices.bunker}}</div>
+        <div class="format-card__badge">from 60 € / hour</div>
         <h3 class="format-card__title">Bunker</h3>
         <p class="format-card__hook">A game of logic and discussion</p>
         <ul class="format-card__list">
@@ -421,7 +421,48 @@
           <h2 class="reviews__title">Client Reviews</h2>
 
 <div class="reviews__track" aria-label="Reviews">
-  {{reviews_items}}
+  
+      <article class="review-card">
+        <p class="review-card__text">“I really love your format and how you run the games, <strong>so much laughter 😂 one mother even suggested another host because the price was lower, but Elya, like me, said — no, we want Nastya 😃</strong>”</p>
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-3.PNG" data-proof-alt="Telegram review screenshot">
+          Show original
+        </button>
+      </article>
+
+      <article class="review-card">
+        <p class="review-card__text">“The game turned out super cool 🔥🔥 Everyone played actively, <strong>even those playing for the first time</strong> 😊 The atmosphere was charged and very lively, especially the character roles were fire, everyone really got into character! 🤣🤣 Thank you so much! 💗 we'll come to your game again 🥰”</p>
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-8.PNG" data-proof-alt="Telegram review screenshot">
+          Show original
+        </button>
+      </article>
+
+      <article class="review-card">
+        <p class="review-card__text">“We had a corporate event yesterday, couldn't reply right away 🙏 Thank you so much for your work! <strong>Diana is wonderful, we had a lot of fun together. 🥳 Very glad to cooperate with you and it's nice to always have responsible people around ❤️</strong>”</p>
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-5.PNG" data-proof-alt="Telegram review screenshot">
+          Show original
+        </button>
+      </article>
+
+      <article class="review-card">
+        <p class="review-card__text">“Thank you for welcoming into your warm company those inexperienced ones <strong>who are playing for the first time 🤗☀️</strong>”</p>
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-13.PNG" data-proof-alt="Telegram review screenshot">
+          Show original
+        </button>
+      </article>
+
+      <article class="review-card">
+        <p class="review-card__text">“Truly <strong>it gets cooler and cooler every time!</strong> Getting into the Mafia role is becoming easier and easier 😂🔥”</p>
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-11.PNG" data-proof-alt="Telegram review screenshot">
+          Show original
+        </button>
+      </article>
+
+      <article class="review-card">
+        <p class="review-card__text">“Diana, hi! <strong>Thanks for a wonderful, fun evening!</strong> I hope my noisy company didn't cause any problems during the event:)”</p>
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-14.PNG" data-proof-alt="Telegram review screenshot">
+          Show original
+        </button>
+      </article>
 </div>
         </div>
 
@@ -454,7 +495,72 @@
           <h2 class="faq__title">FAQ</h2>
 
 <div class="accordion accordion--faq" id="faq-accordion">
-      {{faq_items}}
+      
+    <details class="acc-faq acc-trigger">
+      <summary class="acc-faq__summary">
+        How long does the game last?
+        <span class="acc-faq__icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="acc-faq__panel">
+        <div class="acc-faq__content"><p>It depends on the number of participants and their mood. We always clarify with clients whether they have prior experience and what their expectations are. Hosts try to adapt to the timing if one has been specified.</p></div>
+      </div>
+    </details>
+  
+
+    <details class="acc-faq acc-trigger">
+      <summary class="acc-faq__summary">
+        What is the guest count for a Mafia game?
+        <span class="acc-faq__icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="acc-faq__panel">
+        <div class="acc-faq__content"><p>From 6 to 25 players. We discuss this in advance to ensure the best game dynamics.</p></div>
+      </div>
+    </details>
+  
+
+    <details class="acc-faq acc-trigger">
+      <summary class="acc-faq__summary">
+        In what languages are the events conducted?
+        <span class="acc-faq__icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="acc-faq__panel">
+        <div class="acc-faq__content"><p>In Latvian, English, and Russian. Bilingual events are also possible.</p></div>
+      </div>
+    </details>
+  
+
+    <details class="acc-faq acc-trigger">
+      <summary class="acc-faq__summary">
+        How many players can play Bunker?
+        <span class="acc-faq__icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="acc-faq__panel">
+        <div class="acc-faq__content"><p>From 5 to 20 players. We discuss the details and dynamics in advance.</p></div>
+      </div>
+    </details>
+  
+
+    <details class="acc-faq acc-trigger">
+      <summary class="acc-faq__summary">
+        Are travel expenses included in the price?
+        <span class="acc-faq__icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="acc-faq__panel">
+        <div class="acc-faq__content"><p>No, travel expenses are paid separately depending on the location. In Riga, we only charge for parking.</p></div>
+      </div>
+    </details>
+  
+
+    <details class="acc-faq acc-trigger">
+      <summary class="acc-faq__summary">
+        Do you run games for children?
+        <span class="acc-faq__icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="acc-faq__panel">
+        <div class="acc-faq__content"><p>Yes, starting from 8 years old. If you need programs for younger children, we have partners and can help you organize a kids' party.</p></div>
+      </div>
+    </details>
+  
     </div>
         </div>
       </section>

@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "sharp": "^0.34.5",
+    "svgo": "^4.0.0",
     "swiper": "^12.1.0"
   }
 }

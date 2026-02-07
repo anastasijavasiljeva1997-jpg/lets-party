@@ -7,18 +7,15 @@ import 'swiper/css/pagination';
 
 const headerEl = document.querySelector('.header');
 
-// helpers
 const lockBody = (lock) => {
   document.body.classList.toggle('body--locked', lock);
 };
 
-// Header background
 window.addEventListener('scroll', () => {
   if (!headerEl) return;
   headerEl.classList.toggle('header--scrolled', window.scrollY > 30);
 });
 
-// Burger menu
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 
@@ -63,7 +60,6 @@ detailsList.forEach((detail) => {
   });
 });
 
-// Клик по "Подробнее"
 document.addEventListener('click', (e) => {
   const link = e.target.closest('a[data-acc]');
   if (!link) return;
@@ -123,19 +119,37 @@ proofDialog?.addEventListener('close', () => {
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// swiper
+// --- ГАЛЕРЕЯ И SWIPER ---
+
+function markPortraitImages(root) {
+  const imgs = root.querySelectorAll('.about__slide-img');
+  imgs.forEach((img) => {
+    const apply = () => {
+      const isPortrait = img.naturalHeight > img.naturalWidth;
+      img.classList.toggle('is-contain', isPortrait);
+    };
+    if (img.complete) apply();
+    else img.addEventListener('load', apply, { once: true });
+  });
+}
 
 async function initDynamicGallery() {
+  const sliderEl = document.querySelector('.about__slider');
   const wrapper = document.getElementById('gallery-wrapper');
-  if (!wrapper) return;
+
+  if (!wrapper || !sliderEl) return;
 
   const lang = document.documentElement.lang || 'ru';
-  const contentPath =
-    lang === 'ru' ? '/content/ru.json' : `/content/${lang}.json`;
+
+  const contentPath = `/content/${lang}.json`;
 
   try {
     const response = await fetch(contentPath);
+    if (!response.ok) throw new Error(`Failed to load ${contentPath}`);
+
     const data = await response.json();
+
+    if (!data.gallery) return;
 
     wrapper.innerHTML = data.gallery
       .map(
@@ -152,34 +166,22 @@ async function initDynamicGallery() {
 
     markPortraitImages(wrapper);
 
-    // 4. Инициализируем Swiper
-    new Swiper('.about__slider', {
+    new Swiper(sliderEl, {
       modules: [Navigation, Pagination, A11y],
       loop: true,
       speed: 650,
       slidesPerView: 1,
       spaceBetween: 16,
       navigation: {
-        nextEl: '.about__nav--next',
-        prevEl: '.about__nav--prev',
+        nextEl: sliderEl.querySelector('.about__nav--next'),
+        prevEl: sliderEl.querySelector('.about__nav--prev'),
       },
+      a11y: true,
     });
   } catch (err) {
     console.error('Ошибка загрузки галереи:', err);
   }
 }
 
-function markPortraitImages(root) {
-  const imgs = root.querySelectorAll('.about__slide-img');
-  imgs.forEach((img) => {
-    const apply = () => {
-      const isPortrait = img.naturalHeight > img.naturalWidth;
-      img.classList.toggle('is-contain', isPortrait);
-    };
-    if (img.complete) apply();
-    else img.addEventListener('load', apply, { once: true });
-  });
-}
-
-// Запуск
+// Запуск при загрузке страницы
 initDynamicGallery();
