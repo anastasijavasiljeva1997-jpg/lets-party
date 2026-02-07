@@ -61,15 +61,19 @@
     {
       "question": "Вы проводите игры детям?",
       "answer": "Да, начиная от 8 лет. Но если нужны программы для более маленьких деток у нас есть партнеры и мы можем помочь вам с организацией и детского праздника."
+    },
+    {
+      "question": "Вопрос????",
+      "answer": "ОТВЕТ!!!"
     }
   ],
   "gallery": [
     {
-      "image": "/gallery/2.jpg",
+      "image": "/gallery/1.jpg",
       "caption": "Let’s Party • Dynasty Events"
     },
     {
-      "image": "/gallery/1.jpg",
+      "image": "/gallery/2.jpg",
       "caption": "Let’s Party • Dynasty Events"
     },
     {
