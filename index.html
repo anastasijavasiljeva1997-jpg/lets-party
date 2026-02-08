@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -613,7 +614,7 @@
               >
                 <span class="cbtn__icon" aria-hidden="true"></span>
                 <span class="cbtn__label">WhatsApp</span>
-                <span class="cbtn__meta">Самый быстрый ответ</span>
+                <span class="cbtn__meta">+371 266 309 53</span>
               </a>
 
               <a
@@ -624,7 +625,7 @@
               >
                 <span class="cbtn__icon" aria-hidden="true"></span>
                 <span class="cbtn__label">Instagram</span>
-                <span class="cbtn__meta">Можно с примерами</span>
+                <span class="cbtn__meta">@letsparty.lv</span>
               </a>
             </div>
 
@@ -639,6 +640,8 @@
         <div class="footer__brand">
           <p class="footer__name">Let’s Party</p>
           <p class="footer__meta">Let's Party - Produced by Dynasty Events</p>
+          <a class="footer__meta" href="tel:37126630953">+371 266 309 53</a>
+          <a class="footer__meta" href="https://instagram.com/letsparty.lv">@letsparty.lv</a>
         </div>
 
         <div class="footer__links" aria-label="Контакты">
@@ -667,5 +670,16 @@
     </footer>
 
     <script type="module" src="/src/main.js"></script>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
   </body>
 </html>
