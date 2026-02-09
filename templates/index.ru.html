@@ -270,102 +270,60 @@
 </section>
 
       <section class="format-details" id="formats-details">
-        <div class="container">
-          <div class="accordion accordion--details" id="formats-accordion">
-            <details class="acc-details acc-trigger" id="format-author">
-              <summary class="acc-details__summary">
-                Party Mafia — наш хедлайнер
-                <span class="acc-details__icon" aria-hidden="true">+</span>
-              </summary>
-
-              <div class="acc-details__panel">
-                <div class="acc-details__content">
-                  <p>
-                    Party mafia — это уникальный формат, как новый взгляд на
-                    привычную «мафию». Не просто игра, а полноценная программа
-                    для вашего праздника. Участником дается возможность проявить
-                    свои актерские способности, показать себя с новой стороны и
-                    вырвать победу за счет своих знаний, ловкости, реакции и
-                    смекалки. Это формат, где много эмоций и динамики, где гости
-                    раскрепощаются и включаются в процесс. Подходит для
-                    компаний, которые хотят драйва, движения и ярких
-                    воспоминаний.
-                  </p>
-                </div>
-              </div>
-            </details>
-
-            <details
-              class="acc-details acc-trigger"
-              id="format-immersive-bunker"
-            >
-              <summary class="acc-details__summary">
-                Bunker: Immersive Experience
-                <span class="acc-details__icon" aria-hidden="true">+</span>
-              </summary>
-
-              <div class="acc-details__panel">
-                <div class="acc-details__content">
-                  <p>
-                    Этот формат — для тех, кто хочет максимального погружения в
-                    атмосферу апокалипсиса и выживания. Мы берем за основу
-                    классический «бункер» и создаем уникальный игровой опыт под
-                    вашу компанию: с продуманной концепцией, атмосферой и
-                    деталями, которые раскрываются постепенно. Гости заранее
-                    знают свою профессию и предысторию, а дальше игра
-                    разворачивается в целую историю уже на самой локации. Это
-                    формат для тех, кто хочет не просто поиграть, а прожить
-                    игру!
-                  </p>
-                </div>
-              </div>
-            </details>
-
-            <details class="acc-details acc-trigger" id="format-classic">
-              <summary class="acc-details__summary">
-                Классическая «Мафия»
-                <span class="acc-details__icon" aria-hidden="true">+</span>
-              </summary>
-
-              <div class="acc-details__panel">
-                <div class="acc-details__content">
-                  <p>
-                    Стратегическая, психологическая и интеллектуальная игра для
-                    спокойных компаний. Идеальный формат, чтобы ненавязчиво
-                    дополнить вечер на 1–2 часа: пообщаться, понаблюдать,
-                    включить логику и почувствовать азарт без лишнего шума.
-                    Подходит для тех, кто любит классику, атмосферу и
-                    размеренный темп.
-                  </p>
-                </div>
-              </div>
-            </details>
-
-            <details class="acc-details acc-trigger" id="format-bunker">
-              <summary class="acc-details__summary">
-                Бункер — классический формат
-                <span class="acc-details__icon" aria-hidden="true">+</span>
-              </summary>
-
-              <div class="acc-details__panel">
-                <div class="acc-details__content">
-                  <p>
-                    Игра на выживание, где спасётся не самый громкий, а самый
-                    убедительный. Каждый игрок получает уникальную
-                    характеристику персонажа, и его главная задача — доказать,
-                    почему именно он достоин попасть в бункер и как сможет
-                    помочь человечеству справиться с надвигающейся катастрофой.
-                    Здесь не нужно врать — важно аргументировать, мыслить
-                    стратегически и чувствовать людей. Игра захватывает,
-                    объединяет и часто открывает участников с совершенно новой
-                    стороны.
-                  </p>
-                </div>
-              </div>
-            </details>
+  <div class="container">
+    <div class="accordion accordion--details" id="formats-accordion">
+      
+      <details class="acc-details acc-trigger" id="format-author">
+        <summary class="acc-details__summary">
+          {{formats.party_mafia.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>{{formats.party_mafia.description}}</p>
           </div>
         </div>
-      </section>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-immersive-bunker">
+        <summary class="acc-details__summary">
+          {{formats.bunker_immersive.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>{{formats.bunker_immersive.description}}</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-classic">
+        <summary class="acc-details__summary">
+          {{formats.classic_mafia.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>{{formats.classic_mafia.description}}</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-bunker">
+        <summary class="acc-details__summary">
+          {{formats.bunker.title}}
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>{{formats.bunker.description}}</p>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
 
       <section class="why" id="why">
   <div class="container">

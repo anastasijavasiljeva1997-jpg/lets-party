@@ -4,14 +4,13 @@ backend:
 
 # Где физически лежат картинки в репозитории
 media_folder: 'public/gallery'
-# Какой путь будет записываться в JSON (чтобы браузер их видел как /gallery/...)
+# Какой путь будет записываться в JSON
 public_folder: '/gallery'
 
 collections:
   - name: 'content'
     label: 'Контент (Локализация)'
     files:
-      # Везде добавили префикс public/, так как файлы теперь там
       - file: 'public/content/ru.json'
         label: 'Русская версия'
         name: 'ru'
@@ -41,6 +40,70 @@ collections:
                 ],
             }
           - {
+              label: 'Описания форматов (Аккордеоны)',
+              name: 'formats',
+              widget: 'object',
+              fields:
+                [
+                  {
+                    label: 'Party Mafia',
+                    name: 'party_mafia',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Заголовок', name: 'title', widget: 'string' },
+                        {
+                          label: 'Описание',
+                          name: 'description',
+                          widget: 'text',
+                        },
+                      ],
+                  },
+                  {
+                    label: 'Bunker Immersive',
+                    name: 'bunker_immersive',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Заголовок', name: 'title', widget: 'string' },
+                        {
+                          label: 'Описание',
+                          name: 'description',
+                          widget: 'text',
+                        },
+                      ],
+                  },
+                  {
+                    label: 'Classic Mafia',
+                    name: 'classic_mafia',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Заголовок', name: 'title', widget: 'string' },
+                        {
+                          label: 'Описание',
+                          name: 'description',
+                          widget: 'text',
+                        },
+                      ],
+                  },
+                  {
+                    label: 'Bunker Classic',
+                    name: 'bunker',
+                    widget: 'object',
+                    fields:
+                      [
+                        { label: 'Заголовок', name: 'title', widget: 'string' },
+                        {
+                          label: 'Описание',
+                          name: 'description',
+                          widget: 'text',
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
               label: 'FAQ',
               name: 'faq',
               widget: 'list',
@@ -50,7 +113,12 @@ collections:
                   { label: 'Ответ', name: 'answer', widget: 'text' },
                 ],
             }
-          - { label: 'Отзывы', name: 'reviews', widget: 'list', fields: [
+          - {
+              label: 'Отзывы',
+              name: 'reviews',
+              widget: 'list',
+              fields:
+                [
                   {
                     label: 'Текст (выделяй **жирным**)',
                     name: 'text',
@@ -62,12 +130,11 @@ collections:
                     label: 'Скриншот (из папки proofs)',
                     name: 'image',
                     widget: 'image',
-                    # Для отзывов мы обычно используем папку proofs,
-                    # если хочешь, чтобы они летели в общую галерею — оставь просто widget: image
                     choose_url: false,
                   },
                   { label: 'Alt текст', name: 'image_alt', widget: 'string' },
-                ] }
+                ],
+            }
           - {
               label: 'Галерея',
               name: 'gallery',

@@ -3,11 +3,6 @@ import path from 'path';
 
 const __dirname = path.resolve();
 
-/**
- * template: откуда берем (чистый файл с плейсхолдерами)
- * output: куда сохраняем (готовый файл для Vite/браузера)
- * json: откуда берем данные
- */
 const pages = [
   {
     template: 'templates/index.ru.html',
@@ -31,7 +26,6 @@ pages.forEach((page) => {
   const outputPath = path.join(__dirname, page.output);
   const jsonPath = path.join(__dirname, page.json);
 
-  // Проверка существования файлов
   if (!fs.existsSync(templatePath)) {
     console.warn(`⚠️ Пропуск: Шаблон не найден по пути ${templatePath}`);
     return;
@@ -42,7 +36,6 @@ pages.forEach((page) => {
   }
 
   try {
-    // ЧИТАЕМ ИЗ ШАБЛОНА
     let html = fs.readFileSync(templatePath, 'utf8');
     const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
 
@@ -50,12 +43,29 @@ pages.forEach((page) => {
     if (data.prices) {
       Object.keys(data.prices).forEach((key) => {
         const placeholder = `{{prices.${key}}}`;
-        // split/join надежнее регулярных выражений для простых строк
         html = html.split(placeholder).join(data.prices[key]);
       });
     }
 
-    // 2. Внедрение FAQ
+    // 2. Внедрение ФОРМАТОВ (Party Mafia, Bunker и т.д.)
+    // Проходим по ключам объекта formats и заменяем title и description
+    if (data.formats) {
+      Object.keys(data.formats).forEach((key) => {
+        const titlePlaceholder = `{{formats.${key}.title}}`;
+        const descPlaceholder = `{{formats.${key}.description}}`;
+
+        if (html.includes(titlePlaceholder)) {
+          html = html.split(titlePlaceholder).join(data.formats[key].title);
+        }
+        if (html.includes(descPlaceholder)) {
+          html = html
+            .split(descPlaceholder)
+            .join(data.formats[key].description);
+        }
+      });
+    }
+
+    // 3. Внедрение FAQ
     if (data.faq && html.includes('{{faq_items}}')) {
       const faqHtml = data.faq
         .map(
@@ -75,7 +85,7 @@ pages.forEach((page) => {
       html = html.replace('{{faq_items}}', faqHtml);
     }
 
-    // 3. Внедрение отзывов (Markdown ** -> <strong>)
+    // 4. Внедрение отзывов
     if (data.reviews && html.includes('{{reviews_items}}')) {
       const reviewsHtml = data.reviews
         .map((rev) => {
@@ -84,7 +94,6 @@ pages.forEach((page) => {
             '<strong>$1</strong>',
           );
 
-          // Определяем язык для кнопки
           let btnText = 'Show original';
           if (page.json.includes('ru.json')) btnText = 'Показать оригинал';
           if (page.json.includes('lv.json')) btnText = 'Rādīt oriģinālu';
@@ -101,13 +110,11 @@ pages.forEach((page) => {
       html = html.replace('{{reviews_items}}', reviewsHtml);
     }
 
-    // 4. Создаем папку, если она не существует (для /en и /lv)
     const dir = path.dirname(outputPath);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
 
-    // СОХРАНЯЕМ В ИТОГОВЫЙ ФАЙЛ
     fs.writeFileSync(outputPath, html);
     console.log(`✅ Сгенерирован файл: ${page.output}`);
   } catch (err) {

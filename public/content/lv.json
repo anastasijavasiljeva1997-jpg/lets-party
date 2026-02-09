@@ -96,5 +96,23 @@
     { "image": "/gallery/30.jpg", "caption": "Let’s Party • Dynasty Events" },
     { "image": "/gallery/31.jpg", "caption": "Let’s Party • Dynasty Events" },
     { "image": "/gallery/32.jpg", "caption": "Let’s Party • Dynasty Events" }
-  ]
+  ],
+  "formats": {
+    "party_mafia": {
+      "title": "Party Mafia — mūsu hita formāts",
+      "description": "Party Mafia ir unikāls formāts, jauns skatījums uz ierasto \"mafiju\". Tā nav tikai spēle, bet pilnvērtīga programma jūsu svētkiem. Dalībniekiem tiek dota iespēja izpaust savas aktierprasmes, parādīt sevi no jaunas puses un izcīnīt uzvaru, pateicoties savām zināšanām, veiklībai, reakcijai un atjautībai. Tas ir formāts ar daudz emocijām un dinamiku, kur viesi atbrīvojas un iesaistās procesā. Piemērots kompānijām, kuras vēlas \"draivu\", kustību un spilgtas atmiņas."
+    },
+    "bunker_immersive": {
+      "title": "Bunker: Immersive Experience",
+      "description": "Šis formāts ir domāts tiem, kuri vēlas maksimālu iedziļināšanos apokalipses un izdzīvošanas atmosfērā. Mēs ņemam par pamatu klasisko \"bunkuru\" un radām unikālu spēles pieredzi tieši jūsu kompānijai: ar pārdomātu koncepciju, atmosfēru un detaļām, kas atklājas pakāpeniski. Viesi iepriekš zina savu profesiju un priekšstāstu, un tālāk spēle izvēršas veselā stāstā jau pašā lokācijā. Šis ir formāts tiem, kuri vēlas nevis vienkārši spēlēt, bet izdzīvot spēli!"
+    },
+    "classic_mafia": {
+      "title": "Klasiskā \"Mafija\"",
+      "description": "Stratēģiska, psiholoģiska un intelektuāla spēle mierīgām kompānijām. Ideāls formāts, lai neuzbāzīgi papildinātu vakaru uz 1–2 stundām: aprunātos, pavērotu, pieslēgtu loģiku un sajustu azartu bez lieka trokšņa. Piemērots tiem, kuri mīl klasiku, atmosfēru un mērenu tempu."
+    },
+    "bunker": {
+      "title": "Bunkurs — klasiskais formāts",
+      "description": "Izdzīvošanas spēle, kurā izglābsies nevis skaļākais, bet pārliecinošākais. Katrs spēlētājs saņem unikālu tēla raksturojumu, un viņa galvenais uzdevums ir pierādīt, kāpēc tieši viņš ir pelnījis nokļūt bunkurā un kā varēs palīdzēt cilvēcei tikt galā ar tuvojošos katastrofu. Šeit nav jāmelo — ir svarīgi argumentēt, domāt stratēģiski un just cilvēkus. Spēle aizrauj, vieno un bieži atklāj dalībniekus no pavisam jaunas puses."
+    }
+  }
 }
