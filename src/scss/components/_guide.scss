@@ -1,0 +1,150 @@
+.guide {
+  @extend .section;
+
+  &__label {
+    @extend .kicker;
+  }
+
+  &__title {
+    margin-bottom: $sp-7;
+    font-size: $fs-h2;
+    max-width: 25ch;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $sp-5;
+
+    @media (min-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: row;
+      column-gap: $sp-8;
+      row-gap: $sp-6;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: $sp-4;
+    align-items: flex-start;
+    padding-bottom: $sp-5;
+    border-bottom: 1px solid rgba($color-text, 0.1);
+    transition: border-color $transition;
+
+    &:hover {
+      border-bottom-color: $color-accent;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__marker {
+    width: 8px;
+    height: 8px;
+    margin-top: 7px;
+    border-radius: 50%;
+    background: $color-accent;
+    box-shadow: 0 0 10px rgba($color-accent, 0.4);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $sp-1;
+  }
+
+  &__heading {
+    font-size: $fs-body;
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $color-accent;
+    margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-text;
+    line-height: $lh-base;
+    font-size: 1.05rem;
+    max-width: 45ch;
+  }
+}
+
+@media (min-width: $tablet) {
+  .guide__item {
+    &:nth-last-child(-n + 2) {
+      border-bottom: none;
+    }
+  }
+}
+
+.features {
+  @extend .section;
+  background: rgba($color-bg, 0.5); // Легкое отличие фона от соседней секции
+
+  &__label {
+    @extend .kicker;
+  }
+
+  &__title {
+    margin-bottom: $sp-8;
+    font-size: $fs-h2;
+    max-width: 20ch;
+  }
+
+  &__grid {
+    display: grid;
+    gap: $sp-4;
+
+    @media (min-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $sp-6;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: $sp-4;
+    padding: $sp-5;
+    background: rgba($color-text, 0.03);
+    border: 1px solid rgba($color-text, 0.08);
+    transition: all $transition;
+
+    &:hover {
+      background: rgba($color-accent, 0.05);
+      border-color: rgba($color-accent, 0.3);
+      transform: translateY(-2px);
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-accent;
+    color: $color-bg; // Цвет иконки (обычно белый или темный фон)
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba($color-accent, 0.3);
+  }
+
+  &__text {
+    margin: 0;
+    font-size: $fs-body;
+    font-weight: $fw-medium;
+    line-height: $lh-base;
+    color: $color-text;
+  }
+}

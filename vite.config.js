@@ -21,13 +21,13 @@ export default defineConfig({
       {
         inject: true,
         async: false,
-      }
+      },
     ),
+    // ViteImageOptimizer({
+    //   jpg: { quality: 80 },
+    //   webp: { lossy: true, quality: 80 },
+    //   avif: { quality: 70 },
+    // }),
     ,
-    ViteImageOptimizer({
-      jpg: { quality: 80 },
-      webp: { lossy: true, quality: 80 },
-      avif: { quality: 70 },
-    }),
   ],
 });

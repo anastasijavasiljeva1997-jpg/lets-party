@@ -117,9 +117,26 @@
     }
   }
 
-  &__link {
+  &__actions {
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: $sp-2;
+    font-size: $fs-small;
+  }
+
+  &__cta {
     color: $color-accent;
+    font-weight: $fw-semibold;
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    gap: $sp-2;
+  }
+
+  &__link {
+    color: $color-muted;
     font-weight: $fw-semibold;
     text-decoration: none;
 
@@ -259,6 +276,7 @@
     &__head {
       padding-right: $sp-5;
       border-right: 1px solid rgba(255, 255, 255, 0.08);
+      height: 100%;
     }
 
     &__list {
