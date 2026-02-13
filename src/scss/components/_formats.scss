@@ -120,8 +120,9 @@
   &__actions {
     margin-top: auto;
     display: flex;
-    flex-direction: column;
-    gap: $sp-2;
+    justify-content: space-between;
+    // flex-direction: column;
+    // gap: $sp-2;
     font-size: $fs-small;
   }
 

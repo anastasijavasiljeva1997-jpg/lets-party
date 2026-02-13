@@ -121,8 +121,9 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // --- ГАЛЕРЕЯ И SWIPER ---
 
+// 1. Функция проверки ориентации фото (теперь ищет правильный класс)
 function markPortraitImages(root) {
-  const imgs = root.querySelectorAll('.about__slide-img');
+  const imgs = root.querySelectorAll('.gallery__slide-img'); // Обновлен класс
   imgs.forEach((img) => {
     const apply = () => {
       const isPortrait = img.naturalHeight > img.naturalWidth;
@@ -133,14 +134,14 @@ function markPortraitImages(root) {
   });
 }
 
+// 2. Инициализация галереи
 async function initDynamicGallery() {
-  const sliderEl = document.querySelector('.about__slider');
+  const sliderEl = document.querySelector('.gallery__slider'); // Обновлен селектор
   const wrapper = document.getElementById('gallery-wrapper');
 
   if (!wrapper || !sliderEl) return;
 
   const lang = document.documentElement.lang || 'ru';
-
   const contentPath = `/content/${lang}.json`;
 
   try {
@@ -148,16 +149,16 @@ async function initDynamicGallery() {
     if (!response.ok) throw new Error(`Failed to load ${contentPath}`);
 
     const data = await response.json();
-
     if (!data.gallery) return;
 
+    // Генерируем слайды с новыми классами
     wrapper.innerHTML = data.gallery
       .map(
         (item) => `
       <div class="swiper-slide">
-        <figure class="about__frame">
-          <img class="about__slide-img" src="${item.image}" alt="${item.caption}" loading="lazy" decoding="async" />
-          <figcaption class="about__cap">${item.caption}</figcaption>
+        <figure class="gallery__frame">
+          <img class="gallery__slide-img" src="${item.image}" alt="${item.caption}" loading="lazy" decoding="async" />
+          <figcaption class="gallery__cap">${item.caption}</figcaption>
         </figure>
       </div>
     `,
@@ -166,22 +167,28 @@ async function initDynamicGallery() {
 
     markPortraitImages(wrapper);
 
+    // Инициализация Swiper с актуальными селекторами
     new Swiper(sliderEl, {
+      // Убедись, что модули Navigation и Pagination подключены в твоем билде
       modules: [Navigation, Pagination, A11y],
       loop: true,
-      speed: 650,
+      speed: 800,
       slidesPerView: 1,
-      spaceBetween: 16,
+      spaceBetween: 20,
       navigation: {
-        nextEl: sliderEl.querySelector('.about__nav--next'),
-        prevEl: sliderEl.querySelector('.about__nav--prev'),
+        nextEl: '.gallery__nav--next', // Исправлено (в HTML тоже проверь этот класс)
+        prevEl: '.gallery__nav--prev',
+      },
+      pagination: {
+        el: '.gallery__pagination',
+        clickable: true,
       },
       a11y: true,
+      grabCursor: true, // Добавит иконку "руки" при наведении
     });
   } catch (err) {
     console.error('Ошибка загрузки галереи:', err);
   }
 }
 
-// Запуск при загрузке страницы
 initDynamicGallery();
