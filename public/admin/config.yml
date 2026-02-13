@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: cms # Твоя рабочая ветка
+  branch: main # Твоя рабочая ветка
 
 # Где физически лежат картинки в репозитории
 media_folder: 'public/gallery'
@@ -161,12 +161,12 @@ collections:
         name: 'contacts'
         fields:
           - { label: 'Телефон (текст)', name: 'phone_text', widget: 'string' }
-          - { label: 'Ссылка на телефон (tel:)', name: 'phone_tel_url', widget: 'string' }
           - {
-              label: 'Ссылка WhatsApp',
-              name: 'whatsapp_url',
+              label: 'Ссылка на телефон (tel:)',
+              name: 'phone_tel_url',
               widget: 'string',
             }
+          - { label: 'Ссылка WhatsApp', name: 'whatsapp_url', widget: 'string' }
           - {
               label: 'Instagram (текст)',
               name: 'instagram_text',
