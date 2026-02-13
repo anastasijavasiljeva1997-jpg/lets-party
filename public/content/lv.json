@@ -96,6 +96,13 @@
     { "image": "/gallery/31.jpg", "caption": "Let’s Party • Dynasty Events" },
     { "image": "/gallery/32.jpg", "caption": "Let’s Party • Dynasty Events" }
   ],
+  "contacts": {
+    "kicker": "Sazināties",
+    "title": "Apspriedīsim pasākuma formātu",
+    "text": "Raksti tur, kur tev ir ērtāk. Atbildēsim ātri un precizēsim detaļas.",
+    "note": "* Izbraukums un ceļa izdevumi tiek rēķināti atsevišķi.",
+    "footer_links_aria": "Kontakti"
+  },
   "formats": {
     "party_mafia": {
       "title": "Party Mafia — mūsu hita formāts",

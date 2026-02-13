@@ -40,6 +40,23 @@ collections:
                 ],
             }
           - {
+              label: 'Контакты',
+              name: 'contacts',
+              widget: 'object',
+              fields:
+                [
+                  { label: 'Подзаголовок', name: 'kicker', widget: 'string' },
+                  { label: 'Заголовок', name: 'title', widget: 'string' },
+                  { label: 'Текст', name: 'text', widget: 'text' },
+                  { label: 'Примечание', name: 'note', widget: 'string' },
+                  {
+                    label: 'ARIA подпись футера',
+                    name: 'footer_links_aria',
+                    widget: 'string',
+                  },
+                ],
+            }
+          - {
               label: 'Описания форматов (Аккордеоны)',
               name: 'formats',
               widget: 'object',

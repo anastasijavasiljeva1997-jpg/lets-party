@@ -21,6 +21,28 @@ const pages = [
   },
 ];
 
+function replaceObjectPlaceholders(html, prefix, obj) {
+  if (!obj || typeof obj !== 'object' || Array.isArray(obj)) {
+    return html;
+  }
+
+  Object.entries(obj).forEach(([key, value]) => {
+    const nextPrefix = prefix ? `${prefix}.${key}` : key;
+
+    if (value && typeof value === 'object' && !Array.isArray(value)) {
+      html = replaceObjectPlaceholders(html, nextPrefix, value);
+      return;
+    }
+
+    const placeholder = `{{${nextPrefix}}}`;
+    if (typeof value === 'string' && html.includes(placeholder)) {
+      html = html.split(placeholder).join(value);
+    }
+  });
+
+  return html;
+}
+
 pages.forEach((page) => {
   const templatePath = path.join(__dirname, page.template);
   const outputPath = path.join(__dirname, page.output);
@@ -65,7 +87,10 @@ pages.forEach((page) => {
       });
     }
 
-    // 3. Внедрение FAQ
+    // 3. Внедрение контактов
+    html = replaceObjectPlaceholders(html, 'contacts', data.contacts);
+
+    // 4. Внедрение FAQ
     if (data.faq && html.includes('{{faq_items}}')) {
       const faqHtml = data.faq
         .map(
@@ -85,7 +110,7 @@ pages.forEach((page) => {
       html = html.replace('{{faq_items}}', faqHtml);
     }
 
-    // 4. Внедрение отзывов
+    // 5. Внедрение отзывов
     if (data.reviews && html.includes('{{reviews_items}}')) {
       const reviewsHtml = data.reviews
         .map((rev) => {

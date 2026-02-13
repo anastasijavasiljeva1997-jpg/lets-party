@@ -516,12 +516,12 @@ We consider timing, venue, and guest mix to make the evening convenient and cohe
       <section class="contact" id="booking">
         <div class="container">
           <div class="contact__card">
-            <p class="contact__kicker">Contact</p>
+            <p class="contact__kicker">{{contacts.kicker}}</p>
 
-            <h2 class="contact__title">Discuss your event format</h2>
+            <h2 class="contact__title">{{contacts.title}}</h2>
 
             <p class="contact__text">
-              Message us where it is most convenient for you. We will respond quickly and clarify the details.
+              {{contacts.text}}
             </p>
 
             <div class="contact__actions">
@@ -548,7 +548,7 @@ We consider timing, venue, and guest mix to make the evening convenient and cohe
               </a>
             </div>
 
-            <p class="contact__note">* Travel and commute are charged separately.</p>
+            <p class="contact__note">{{contacts.note}}</p>
           </div>
         </div>
       </section>
@@ -563,7 +563,7 @@ We consider timing, venue, and guest mix to make the evening convenient and cohe
           <a class="footer__meta" href="https://instagram.com/letsparty.lv">@letsparty.lv</a>
         </div>
 
-        <div class="footer__links" aria-label="Contacts">
+        <div class="footer__links" aria-label="{{contacts.footer_links_aria}}">
           <a
             class="footer__link"
             href="https://instagram.com/letsparty.lv"

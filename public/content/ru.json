@@ -96,6 +96,13 @@
     { "image": "/gallery/31.jpg", "caption": "Let’s Party • Dynasty Events" },
     { "image": "/gallery/32.jpg", "caption": "Let’s Party • Dynasty Events" }
   ],
+  "contacts": {
+    "kicker": "Связаться",
+    "title": "Обсудить формат мероприятия",
+    "text": "Напиши туда, где тебе удобнее. Ответим быстро и уточним детали.",
+    "note": "* Выезд и дорога считаются отдельно.",
+    "footer_links_aria": "Контакты"
+  },
   "formats": {
     "party_mafia": {
       "title": "Party Mafia — наш хедлайнер",

@@ -96,6 +96,13 @@
     { "image": "/gallery/31.jpg", "caption": "Let’s Party • Dynasty Events" },
     { "image": "/gallery/32.jpg", "caption": "Let’s Party • Dynasty Events" }
   ],
+  "contacts": {
+    "kicker": "Contact",
+    "title": "Discuss your event format",
+    "text": "Message us where it is most convenient for you. We will respond quickly and clarify the details.",
+    "note": "* Travel and commute are charged separately.",
+    "footer_links_aria": "Contacts"
+  },
   "formats": {
     "party_mafia": {
       "title": "Party Mafia — our headliner",

@@ -505,12 +505,12 @@
       <section class="contact" id="booking">
         <div class="container">
           <div class="contact__card">
-            <p class="contact__kicker">Sazināties</p>
+            <p class="contact__kicker">{{contacts.kicker}}</p>
 
-            <h2 class="contact__title">Apspriedīsim pasākuma formātu</h2>
+            <h2 class="contact__title">{{contacts.title}}</h2>
 
             <p class="contact__text">
-              Raksti tur, kur tev ir ērtāk. Atbildēsim ātri un precizēsim detaļas.
+              {{contacts.text}}
             </p>
 
             <div class="contact__actions">
@@ -537,7 +537,7 @@
               </a>
             </div>
 
-            <p class="contact__note">* Izbraukums un ceļa izdevumi tiek rēķināti atsevišķi.</p>
+            <p class="contact__note">{{contacts.note}}</p>
           </div>
         </div>
       </section>
@@ -552,7 +552,7 @@
           <a class="footer__meta" href="https://instagram.com/letsparty.lv">@letsparty.lv</a>
         </div>
 
-        <div class="footer__links" aria-label="Kontakti">
+        <div class="footer__links" aria-label="{{contacts.footer_links_aria}}">
           <a
             class="footer__link"
             href="https://instagram.com/letsparty.lv"

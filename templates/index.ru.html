@@ -533,12 +533,12 @@
       <section class="contact" id="booking">
         <div class="container">
           <div class="contact__card">
-            <p class="contact__kicker">Связаться</p>
+            <p class="contact__kicker">{{contacts.kicker}}</p>
 
-            <h2 class="contact__title">Обсудить формат мероприятия</h2>
+            <h2 class="contact__title">{{contacts.title}}</h2>
 
             <p class="contact__text">
-              Напиши туда, где тебе удобнее. Ответим быстро и уточним детали.
+              {{contacts.text}}
             </p>
 
             <div class="contact__actions">
@@ -565,7 +565,7 @@
               </a>
             </div>
 
-            <p class="contact__note">* Выезд и дорога считаются отдельно.</p>
+            <p class="contact__note">{{contacts.note}}</p>
           </div>
         </div>
       </section>
@@ -580,7 +580,7 @@
           <a class="footer__meta" href="https://instagram.com/letsparty.lv">@letsparty.lv</a>
         </div>
 
-        <div class="footer__links" aria-label="Контакты">
+        <div class="footer__links" aria-label="{{contacts.footer_links_aria}}">
           <a
             class="footer__link"
             href="https://instagram.com/letsparty.lv"
