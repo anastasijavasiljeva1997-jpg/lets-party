@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
-  branch: main # Твоя рабочая ветка
+  name: github
+  repo: orthus2106/letsparty
+  branch: main
+  base_url: https://lets-party-cms.erik-lebedevv.workers.dev
+  auth_endpoint: auth
 
 # Копить изменения как черновики и публиковать только по кнопке Publish
 publish_mode: editorial_workflow
