@@ -77,7 +77,9 @@ content:
         fields:
           - name: text
             label: Текст (выделяй **жирным**)
-            type: text
+            type: rich-text
+            options:
+              format: markdown
           - name: image
             label: Скриншот (из папки proofs)
             type: image
