@@ -138,7 +138,7 @@ pages.forEach((page) => {
           return `
       <article class="review-card">
         <p class="review-card__text">${formattedText}</p>
-        <button class="review-card__btn" type="button" data-open-proof data-proof-src="${rev.image}" data-proof-alt="${rev.image_alt}">
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="${rev.image}" data-proof-alt="Review from social">
           ${btnText}
         </button>
       </article>`;

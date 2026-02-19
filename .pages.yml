@@ -85,9 +85,6 @@ content:
             type: image
             options:
               media: proofs
-          - name: image_alt
-            label: Alt текст
-            type: string
 
   - name: en
     label: English Version
