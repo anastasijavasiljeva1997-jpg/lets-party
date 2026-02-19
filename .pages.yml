@@ -1,0 +1,163 @@
+media:
+  input: public/gallery
+  output: /gallery
+
+content:
+  - name: ru
+    label: Русская версия
+    type: file
+    path: public/content/ru.json
+    format: json
+    fields: &localized_fields
+      - name: formats
+        label: Описания форматов (Аккордеоны)
+        type: object
+        fields:
+          - name: party_mafia
+            label: Party Mafia
+            type: object
+            fields:
+              - name: title
+                label: Заголовок
+                type: string
+              - name: description
+                label: Описание
+                type: text
+          - name: bunker_immersive
+            label: Bunker Immersive
+            type: object
+            fields:
+              - name: title
+                label: Заголовок
+                type: string
+              - name: description
+                label: Описание
+                type: text
+          - name: classic_mafia
+            label: Classic Mafia
+            type: object
+            fields:
+              - name: title
+                label: Заголовок
+                type: string
+              - name: description
+                label: Описание
+                type: text
+          - name: bunker
+            label: Bunker Classic
+            type: object
+            fields:
+              - name: title
+                label: Заголовок
+                type: string
+              - name: description
+                label: Описание
+                type: text
+      - name: faq
+        label: FAQ
+        type: object
+        list: true
+        fields:
+          - name: question
+            label: Вопрос
+            type: string
+          - name: answer
+            label: Ответ
+            type: text
+      - name: reviews
+        label: Отзывы
+        type: object
+        list: true
+        fields:
+          - name: text
+            label: Текст (выделяй **жирным**)
+            type: text
+          - name: image
+            label: Скриншот (из папки proofs)
+            type: image
+            options:
+              path: ../proofs
+          - name: image_alt
+            label: Alt текст
+            type: string
+
+  - name: en
+    label: English Version
+    type: file
+    path: public/content/en.json
+    format: json
+    fields: *localized_fields
+
+  - name: lv
+    label: Latviešu versija
+    type: file
+    path: public/content/lv.json
+    format: json
+    fields: *localized_fields
+
+  - name: contacts
+    label: Контакты
+    type: file
+    path: public/content/contacts.json
+    format: json
+    fields:
+      - name: phone_text
+        label: Телефон (текст)
+        type: string
+      - name: phone_tel_url
+        label: Ссылка на телефон (tel:)
+        type: string
+      - name: whatsapp_url
+        label: Ссылка WhatsApp
+        type: string
+      - name: instagram_text
+        label: Instagram (текст)
+        type: string
+      - name: instagram_url
+        label: Ссылка Instagram
+        type: string
+
+  - name: gallery
+    label: Галерея
+    type: file
+    path: public/content/gallery.json
+    format: json
+    fields:
+      - name: gallery
+        label: Галерея
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Фото
+            type: image
+          - name: caption
+            label: Подпись
+            type: string
+
+  - name: prices
+    label: Цены
+    type: file
+    path: public/content/prices.json
+    format: json
+    fields:
+      - name: prices
+        label: Цены (только цифры)
+        type: object
+        fields:
+          - name: party_mafia
+            label: Party Mafia
+            type: number
+          - name: bunker_immersive
+            label: Bunker Immersive
+            type: number
+          - name: classic_mafia
+            label: Classic Mafia
+            type: number
+          - name: bunker
+            label: Bunker
+            type: number
+
+settings:
+  content:
+    merge: true
