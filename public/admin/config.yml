@@ -1,12 +1,8 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
 backend:
   name: github
-  repo: orthus2106/letsparty
+  repo: orthrus2106/letsparty
   branch: main
-  base_url: https://lets-party-cms.erik-lebedevv.workers.dev
-  auth_endpoint: auth
-
-# Копить изменения как черновики и публиковать только по кнопке Publish
-publish_mode: editorial_workflow
 
 media_folder: 'public/gallery'
 public_folder: '/gallery'
