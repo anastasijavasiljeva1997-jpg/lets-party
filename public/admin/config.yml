@@ -2,9 +2,10 @@ backend:
   name: git-gateway
   branch: main # Твоя рабочая ветка
 
-# Где физически лежат картинки в репозитории
+# Копить изменения как черновики и публиковать только по кнопке Publish
+publish_mode: editorial_workflow
+
 media_folder: 'public/gallery'
-# Какой путь будет записываться в JSON
 public_folder: '/gallery'
 
 collections:

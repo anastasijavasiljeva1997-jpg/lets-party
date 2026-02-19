@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Организация атмосферных мероприятий и иммерсивных игр в Риге. Уникальный опыт, авторские форматы Mafia и Bunker для частных и корпоративных клиентов."
+    />
+
+    <meta http-equiv="content-language" content="ru" />
+    <title>Let's Party / Dynasty Events</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo" href="#">
+          <img class="header__image" src="/logo.png" alt="Let's Party" />
+          <p class="header__text">Let's Party</p>
+        </a>
+
+        <!-- DESKTOP NAV  -->
+        <nav class="header__nav nav" aria-label="Навигация">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#formats">Форматы</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#extras">Дополнительно</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#reviews">Отзывы</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">О нас</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#booking">Контакты</a>
+            </li>
+          </ul>
+
+          <div class="lang lang--desktop" aria-label="Язык">
+            <a href="/ru/" class="lang__btn is-active" id="lang-ru">RU</a>
+            <a href="/" class="lang__btn" id="lang-lv">LV</a>
+            <a href="/en/" class="lang__btn" id="lang-en">EN</a>
+          </div>
+        </nav>
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div class="menu" id="menu" aria-hidden="true">
+        <button
+          class="menu__overlay"
+          type="button"
+          data-menu-close
+          aria-label="Закрыть меню"
+        ></button>
+
+        <nav class="menu__panel" aria-label="Навигация">
+          <div class="lang lang--mobile" aria-label="Язык">
+            <a href="/ru/" class="lang__btn is-active">RU</a>
+            <a href="/" class="lang__btn">LV</a>
+            <a href="/en/" class="lang__btn">EN</a>
+          </div>
+
+          <ul class="menu__list">
+            <li><a class="menu__link" href="#formats">Форматы</a></li>
+            <li><a class="menu__link" href="#extras">Дополнительно</a></li>
+            <li><a class="menu__link" href="#reviews">Отзывы</a></li>
+            <li><a class="menu__link" href="#about">О нас</a></li>
+            <li><a class="menu__link" href="#faq">FAQ</a></li>
+            <li><a class="menu__link" href="#booking">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              LET'S <span>PARTY</span> — <br />
+              <small class="hero__subtitle"
+                >Твоя вечеринка начинается с нас</small
+              >
+            </h1>
+            <p class="hero__lead">
+              Программы и игры для вашего праздника в Риге. С ведущим для дня рождения, корпоратива и компаний друзей от 6 до 50 человек от <strong>60 € / час</strong>
+            </p>
+
+            <!-- <ul class="hero__chips">
+              <li>RU / LV / EN</li>
+              <li>Выезд на вашу площадку</li>
+              <li>Mafia / Bunker</li>
+            </ul> -->
+
+            <div class="hero__actions">
+              <a class="hero__button btn" href="#booking">Зарезервировать дату</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="formats" id="formats">
+  <div class="container">
+    <p class="formats__label">Что мы предлагаем?</p>
+    <h2 class="formats__title">Наши форматы</h2>
+
+    <div class="formats__grid">
+      <article class="format-card format-card--featured">
+        <div class="format-card__badge format-card__badge--featured">
+          от 80 € / час
+        </div>
+        <h3 class="format-card__title">Party Mafia</h3>
+        <p class="format-card__hook">Полноценный сценарий для программы вашего праздника начиная от 3 часов.</p>
+        <ul class="format-card__list">
+          <li>Уникальные роли и характеры персонажей</li>
+          <li>Ведущий как шоураннер</li>
+          <li>Максимальное вовлечение гостей</li>
+          <li>Игра в игре с конкурсами за имунитет и на «выживание»</li>
+        </ul>
+        <div class="format-card__actions">
+          
+        <a href="#format-author" class="format-card__link" data-acc="format-author">Подробнее →</a>
+        <a href="#booking" class="format-card__cta">
+  Забронировать дату →
+</a>
+        </div>
+      </article>
+
+      <article class="format-card format-card--featured">
+        <div class="format-card__badge format-card__badge--featured">
+          от 100 € / час
+        </div>
+        <h3 class="format-card__title">Bunker: Immersive Experience</h3>
+        <p class="format-card__hook">Погружение в сюжет игры ещё до ее начала. Новинка рынка!</p>
+        <ul class="format-card__list">
+          <li>Засекреченная локация</li>
+          <li>Персональные роли и досье участника</li>
+          <li>Подготовленный реквизит (багаж)</li>
+          <li>История, где каждый выбор имеет значение</li>
+          <li>Атмосфера кино, а не игры</li>
+        </ul>
+        <div class="format-card__actions">
+          <a href="#format-immersive-bunker" class="format-card__link" data-acc="format-immersive-bunker">Подробнее →</a>
+        <a href="#booking" class="format-card__cta">
+  Забронировать дату →
+</a>
+        </div>
+      </article>
+
+      <article class="format-card">
+        <div class="format-card__badge">от 60 € / час</div>
+        <h3 class="format-card__title">Классическая мафия</h3>
+        <p class="format-card__hook">Знакомый формат для любой компании</p>
+        <ul class="format-card__list">
+          <li>Классические правила</li>
+          <li>Для любой аудитории</li>
+          <li>Гибкая длительность</li>
+          <li>Музыкальное сопровождение</li>
+          <li>Профессиональная атрибутика</li>
+          <li>Подарки лучшим игрокам</li>
+        </ul>
+        <div class="format-card__actions">
+          <a href="#format-classic" class="format-card__link" data-acc="format-classic">Подробнее →</a>
+          <a href="#booking" class="format-card__cta">
+  Забронировать дату →
+</a>
+        </div>
+        
+      </article>
+
+      <article class="format-card">
+        <div class="format-card__badge">от 60 € / час</div>
+        <h3 class="format-card__title">Бункер</h3>
+        <p class="format-card__hook">Игра на логику и обсуждение</p>
+        <ul class="format-card__list">
+          <li>Сюжет выживания</li>
+          <li>Стратегия и аргументы</li>
+          <li>Командная динамика</li>
+        </ul>
+        <div class="format-card__actions">
+          <a href="#format-bunker" class="format-card__link" data-acc="format-bunker">Подробнее →</a>
+          <a href="#booking" class="format-card__cta">
+  Забронировать дату →
+</a>
+        </div>
+      </article>
+
+      <article class="extras-card" id="extras">
+        <div class="extras-card__head">
+          <p class="extras-card__kicker">Дополнительно</p>
+          <h3 class="extras-card__title">Услуги от Dynasty Events</h3>
+          <p class="extras-card__text">Если нужен не только формат игры, но и полный ивент “под ключ” — мы поможем.</p>
+        </div>
+        <ul class="extras-card__list">
+          <li class="extras-card-item">Организация камерных свадеб, корпоративов, юбилеев</li>
+          <li class="extras-card-item">Девичники и мальчишники под ключ</li>
+          <li class="extras-card-item">Фотограф и видеограф</li>
+          <li class="extras-card-item">Мобильная съёмка + монтаж <span>(формат обсуждаем с клиентом)</span></li>
+          <li class="extras-card-item">Декор и оформление мероприятий</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="gallery__media">
+      <div class="gallery__slider swiper" aria-label="Галерея Let’s Party">
+        <div class="swiper-wrapper" id="gallery-wrapper">
+          </div>
+
+        <button class="gallery__nav gallery__nav--prev" type="button" aria-label="Предыдущее фото"></button>
+        <button class="gallery__nav gallery__nav--next" type="button" aria-label="Следующее фото"></button>
+        
+        <!-- <div class="gallery__pagination swiper-pagination"></div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="format-details" id="formats-details">
+  <div class="container">
+    <div class="accordion accordion--details" id="formats-accordion">
+      
+      <details class="acc-details acc-trigger" id="format-author">
+        <summary class="acc-details__summary">
+          Party Mafia — наш хедлайнер
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>Party Mafia — продюсерский формат праздничной «Мафии». Это не просто расширенная версия классической игры, а полноценная вечерняя программа с режиссурой, динамикой и продуманной структурой. В отличие от стандартной «Мафии», где игра строится вокруг обсуждений и голосований, Party Mafia включает дополнительные игровые механики и специальные роли, интерактивные элементы между раундами, управляемую динамику вечера и сценарную логику развития событий. Ведущий выступает не только как модератор игры, но как режиссёр атмосферы — контролируя темп, вовлечённость гостей и общий ритм события. Party Mafia выбирают для дней рождений, корпоративов и частных мероприятий, где важны стиль, энергия и качественный продюсерский подход.</p>
+            <a href="#booking" class="acc-details__cta">
+  Забронировать дату →
+</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-immersive-bunker">
+        <summary class="acc-details__summary">
+          Bunker: Immersive Experience
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>Этот формат — для тех, кто хочет максимального погружения в атмосферу апокалипсиса и выживания. Мы берем за основу классический «бункер» и создаем уникальный игровой опыт под вашу компанию: с продуманной концепцией, атмосферой и деталями, которые раскрываются постепенно. Гости заранее знают свою профессию и предысторию, а дальше игра разворачивается в целую историю уже на самой локации. Это формат для тех, кто хочет не просто поиграть, а прожить игру!</p>
+            <a href="#booking" class="acc-details__cta">
+  Забронировать дату →
+</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-classic">
+        <summary class="acc-details__summary">
+          Классическая «Мафия»
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>Стратегическая, психологическая и интеллектуальная игра для спокойных компаний. Идеальный формат, чтобы ненавязчиво дополнить вечер на 1–2 часа: пообщаться, понаблюдать, включить логику и почувствовать азарт без лишнего шума. Подходит для тех, кто любит классику, атмосферу и размеренный темп.</p>
+            <a href="#booking" class="acc-details__cta">
+  Забронировать дату →
+</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="acc-details acc-trigger" id="format-bunker">
+        <summary class="acc-details__summary">
+          Бункер — классический формат
+          <span class="acc-details__icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="acc-details__panel">
+          <div class="acc-details__content">
+            <p>Игра на выживание, где спасётся не самый громкий, а самый убедительный. Каждый игрок получает уникальную характеристику персонажа, и его главная задача — доказать, почему именно он достоин попасть в бункер и как сможет помочь человечеству справиться с надвигающейся катастрофой. Здесь не нужно врать — важно аргументировать, мыслить стратегически и чувствовать людей. Игра захватывает, объединяет и часто открывает участников с совершенно новой стороны.</p>
+            <a href="#booking" class="acc-details__cta">
+  Забронировать дату →
+</a>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="guide" id="guide">
+  <div class="container">
+    <p class="guide__label">Как проходит сотрудничество?</p>
+    <h2 class="guide__title">Простой и понятный процесс — от заявки до яркого вечера</h2>
+
+    <ul class="guide__list">
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Шаг 01</h3>
+          <p class="guide__text">
+            Вы оставляете заявку удобным для вас способом
+          </p>
+        </div>
+      </li>
+
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Шаг 02</h3>
+          <p class="guide__text">
+            Мы задаём 3 – 5 уточняющих вопросов, чтобы понять масштаб и цели вашего события.
+          </p>
+        </div>
+      </li>
+
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Шаг 03</h3>
+          <p class="guide__text">
+            Подбираем оптимальный формат игры и интерактивов именно под вашу компанию.
+          </p>
+        </div>
+      </li>
+
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Шаг 04</h3>
+          <p class="guide__text">
+            Готовим индивидуальный сценарий и согласовываем все технические детали.
+          </p>
+        </div>
+      </li>
+
+      <li class="guide__item">
+        <span class="guide__marker"></span>
+        <div class="guide__content">
+          <h3 class="guide__heading">Шаг 05</h3>
+          <p class="guide__text">
+            Проводим игру, вовлекаем гостей и создаём ту самую атмосферу праздника.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+      <section class="why" id="why">
+  <div class="container">
+    <p class="why__label">Почему выбирают нас?</p>
+    <h2 class="why__title">
+      Мы создаём опыт,<br />
+      а не просто проводим игры
+    </h2>
+
+    <div class="why__items">
+      <article class="why-item">
+        <h3 class="why-item__title">Продюсерский подход</h3>
+        <p class="why-item__text">
+          Мы не работаем по шаблонам.
+Каждый формат адаптируется под компанию, настроение и цель мероприятия! 
+
+Мы задаем наводящие вопросы и любим, когда вы рассказываете о своей компании, чтобы можно было придумать уникальные фишки именно под вашу компанию. 
+        </p>
+      </article>
+
+      <article class="why-item">
+        <h3 class="why-item__title">Живое и мягкое вовлечение</h3>
+        <p class="why-item__text">
+          Мы умеем создавать динамику без давления! Заставлять мы точно никого не будем. 
+
+Активные гости получают пространство для игры, а более спокойные — чувствуют себя уверенно и естественно включаются в процесс.
+        </p>
+      </article>
+
+      <article class="why-item">
+        <h3 class="why-item__title">Чувство зала и атмосферы</h3>
+        <p class="why-item__text">
+          Мы внимательно считываем настроение группы и управляем темпом вечера, чтобы он не «проседал» и не утомлял.
+
+Игра развивается органично, а атмосфера остаётся живой и тёплой.
+        </p>
+      </article>
+
+      <article class="why-item">
+        <h3 class="why-item__title">Многоязычный формат</h3>
+        <p class="why-item__text">
+          Мы проводим мероприятия на русском, латышском и английском языках, включая билингвальные форматы 
+
+— чтобы каждый гость чувствовал себя на равных и не выпадал из процесса.
+        </p>
+      </article>
+
+      <article class="why-item">
+        <h3 class="why-item__title">Гибкость и комфорт</h3>
+        <p class="why-item__text">
+          Мы подстраиваем формат под людей, а не людей под формат.
+
+Учитываем тайминг, площадку и состав гостей, чтобы вечер был удобным и логичным для всех участников.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+      <section class="reviews" id="reviews">
+        <div class="container">
+          <p class="reviews__label">Что о нас говорят?</p>
+          <h2 class="reviews__title">Отзывы клиентов</h2>
+
+          <div class="reviews__track" aria-label="Отзывы">
+  
+      <article class="review-card">
+        <p class="review-card__text">“Да мне очень заходит ваш формат как вы проводите игры, <strong>стоко смеха 😂 у нас даже мама одна другого ведущего предлагала, так как цена ниже, но Эля так же, как и я — не, мы Настю хотим 😃</strong>”</p>
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-3.PNG" data-proof-alt="Скриншот отзыва из Telegram">
+          Показать оригинал
+        </button>
+      </article>
+
+      <article class="review-card">
+        <p class="review-card__text">“Игра получилась супер классной 🔥🔥 Все активно играли, <strong>даже те, кто первый раз играл</strong> 😊 Обстановка была заряженной и очень живой, особенно тема с ролями прям огонь, все очень вошли в свою роль и отыгрывали на все 100! 🤣🤣 Спасибо огромное! 💗 еще придем к тебе на игру 🥰”</p>
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-8.PNG" data-proof-alt="Скриншот отзыва из Telegram">
+          Показать оригинал
+        </button>
+      </article>
+
+      <article class="review-card">
+        <p class="review-card__text">“Вчера у нас был корпоратив, не смогла сразу ответить 🙏 Большое спасибо за вашу работу! <strong>Диана замечательная, нам было очень весело вместе. 🥳 Очень рада с тобой сотрудничать и приятно, что рядом всегда есть ответственные люди ❤️</strong>”</p>
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-5.PNG" data-proof-alt="Скриншот отзыва из Telegram">
+          Показать оригинал
+        </button>
+      </article>
+
+      <article class="review-card">
+        <p class="review-card__text">“Спасибо, что приняли в свою теплую компанию тех неопытных, <strong>кто играет первые разы 🤗☀️</strong>”</p>
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-13.PNG" data-proof-alt="Скриншот отзыва из Telegram">
+          Показать оригинал
+        </button>
+      </article>
+
+      <article class="review-card">
+        <p class="review-card__text">“Вправду <strong>с каждым разом всё круче и круче!</strong> Входить в роль мафии становится всё легче и легче 😂🔥”</p>
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-11.PNG" data-proof-alt="Скриншот отзыва из Telegram">
+          Показать оригинал
+        </button>
+      </article>
+
+      <article class="review-card">
+        <p class="review-card__text">“Диана, привет! <strong>Спасибо за прекрасный, весёлый вечер!</strong> Я надеюсь, что моя шумная компания не создавала проблем в проведении мероприятия:)”</p>
+        <button class="review-card__btn" type="button" data-open-proof data-proof-src="/proofs/proof-14.PNG" data-proof-alt="Скриншот отзыва из Telegram">
+          Показать оригинал
+        </button>
+      </article>
+</div>
+        </div>
+
+        <dialog class="proof" id="proof">
+          <div class="proof__box" role="document">
+            <button
+              class="proof__close"
+              type="button"
+              data-proof-close
+              aria-label="Закрыть"
+            >
+              ✕
+            </button>
+
+            <figure class="proof__figure">
+              <img class="proof__img" src="" alt="" />
+              <figcaption class="proof__cap">Оригинал отзыва</figcaption>
+            </figure>
+          </div>
+
+          <form method="dialog" class="proof__backdrop">
+            <button aria-label="Закрыть"></button>
+          </form>
+        </dialog>
+      </section>
+
+            <section class="about" id="about">
+        <div class="container">
+          <div class="about__grid">
+            <div class="about__text">
+              <p class="about__kicker">Кто мы такие</p>
+
+              <h2 class="about__title">Мы создаём не игры — мы создаём опыт</h2>
+
+              <div class="about__body">
+                <p>
+                  <strong>Let’s Party</strong> — это проект, созданный из
+                  дружбы, энергии и любви к живым праздникам.
+                </p>
+
+                <p>
+                  Мы — Анастасия и Диана, две подруги, которые с детства были в
+                  центре всех мероприятий: актёрский кружок, школьные праздники,
+                  сценарии и вечеринки для друзей — просто потому, что нам это
+                  было по-настоящему интересно.
+                </p>
+
+                <p>
+                  Ещё в восьмом классе после постановки спектакля мы придумали
+                  название
+                  <strong>Dynasty</strong>, соединив наши имена и мечту о своём
+                  деле. В 2025 году эта мечта обрела форму компании по созданию
+                  праздников — <strong>Dynasty Events</strong>. Но начать мы
+                  решили с проекта Let’s Party.
+                </p>
+
+                <p>
+                  <strong>Анастасия</strong> — сооснователь проекта и ведущая с
+                  2022 года, за плечами — более 500 ивентов. Для неё важно не
+                  «отработать формат», а создать атмосферу, подходящую именно
+                  для вашей компании.
+                </p>
+
+                <p>
+                  <strong>Диана</strong> — сооснователь проекта с
+                  предпринимательским опытом с 2020 года. Она легко находит
+                  подход к любому человеку, умеет зажечь, договориться и создать
+                  комфортную, живую атмосферу.
+                </p>
+
+                <p class="about__note">
+                  Мы одинаковы по вайбу, энергии и отношению к делу — и именно
+                  это делает нашу команду цельной.
+                </p>
+              </div>
+            </div>
+
+            <div class="about__media">
+ <img src="/src/assets/about.jpg" alt="">
+</div>
+      </section>
+
+            <section class="faq" id="faq">
+        <div class="container">
+          <p class="faq__label">Часто задаваемые вопросы</p>
+          <h2 class="faq__title">FAQ</h2>
+
+<div class="accordion accordion--faq" id="faq-accordion">
+      
+    <details class="acc-faq acc-trigger">
+      <summary class="acc-faq__summary">
+        Сколько длится игра?
+        <span class="acc-faq__icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="acc-faq__panel">
+        <div class="acc-faq__content"><p>Зависит от количества участников и их настроя. Мы всегда уточняем у клиентов был ли до этого опыт подобных игр и какие ожидания на этот вечер. Ведущие стараются подстроится под тайминг, если такой был обозначен.</p></div>
+      </div>
+    </details>
+  
+
+    <details class="acc-faq acc-trigger">
+      <summary class="acc-faq__summary">
+        Для какого количества гостей игра в мафию?
+        <span class="acc-faq__icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="acc-faq__panel">
+        <div class="acc-faq__content"><p>От 6 до 25, заранее проговариваем этот момент и обговариваем динамику игры.</p></div>
+      </div>
+    </details>
+  
+
+    <details class="acc-faq acc-trigger">
+      <summary class="acc-faq__summary">
+        На каких языках проводятся мероприятия?
+        <span class="acc-faq__icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="acc-faq__panel">
+        <div class="acc-faq__content"><p>На латышском, английском и русском языках. Возможно и билингвальное проведение.</p></div>
+      </div>
+    </details>
+  
+
+    <details class="acc-faq acc-trigger">
+      <summary class="acc-faq__summary">
+        Какое количество игроков могут играть в бункер?
+        <span class="acc-faq__icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="acc-faq__panel">
+        <div class="acc-faq__content"><p>От 5 до 20, заранее обговариваем этот момент и обговариваем динамику игры.</p></div>
+      </div>
+    </details>
+  
+
+    <details class="acc-faq acc-trigger">
+      <summary class="acc-faq__summary">
+        Входят ли дорожные расходы в цену?
+        <span class="acc-faq__icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="acc-faq__panel">
+        <div class="acc-faq__content"><p>Нет, дорожные расходы оплачиваются отдельно в зависимости от локации. По Риге берем только за парковку.</p></div>
+      </div>
+    </details>
+  
+
+    <details class="acc-faq acc-trigger">
+      <summary class="acc-faq__summary">
+        Вы проводите игры детям?
+        <span class="acc-faq__icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="acc-faq__panel">
+        <div class="acc-faq__content"><p>Да, начиная от 8 лет. Но если нужны программы для более маленьких деток у нас есть партнеры и мы можем помочь вам с организацией и детского праздника.</p></div>
+      </div>
+    </details>
+  
+    </div>
+        </div>
+      </section>
+
+      <section class="contact" id="booking">
+        <div class="container">
+          <div class="contact__card">
+            <p class="contact__kicker">Связаться</p>
+
+            <h2 class="contact__title">Обсудить формат мероприятия</h2>
+
+            <p class="contact__text">
+              Напиши туда, где тебе удобнее. Ответим быстро и уточним детали.
+            </p>
+
+            <div class="contact__actions">
+              <a
+                class="cbtn cbtn--wa"
+                href="https://wa.me/37126630953"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="cbtn__icon" aria-hidden="true"></span>
+                <span class="cbtn__label">WhatsApp</span>
+                <span class="cbtn__meta">+371 266 309 53</span>
+              </a>
+
+              <a
+                class="cbtn cbtn--ig"
+                href="https://instagram.com/letsparty.lv"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="cbtn__icon" aria-hidden="true"></span>
+                <span class="cbtn__label">Instagram</span>
+                <span class="cbtn__meta">@letsparty.lv</span>
+              </a>
+            </div>
+
+            <p class="contact__note">* Выезд и дорога считаются отдельно.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <p class="footer__name">Let’s Party</p>
+          <p class="footer__meta">Let's Party - Produced by Dynasty Events</p>
+          <a class="footer__meta" href="tel:37126630953">+371 266 309 53</a>
+          <a class="footer__meta" href="https://instagram.com/letsparty.lv">@letsparty.lv</a>
+        </div>
+
+        <div class="footer__links" aria-label="Контакты">
+          <a
+            class="footer__link"
+            href="https://instagram.com/letsparty.lv"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+          <a
+            class="footer__link"
+            href="https://wa.me/37126630953"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+        </div>
+
+        <p class="footer__copy">
+          © <span id="year"></span> Let’s Party. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+  </body>
+</html>
