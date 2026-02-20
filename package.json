@@ -5,15 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/inject-cms.mjs",
+    "prebuild": "node scripts/optimize-images.mjs && node scripts/inject-cms.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "optimize:images": "node scripts/optimize-images.mjs"
   },
   "devDependencies": {
     "sass-embedded": "^1.97.3",
     "vite": "^7.2.4"
   },
   "dependencies": {
+    "sharp": "^0.34.5",
     "swiper": "^12.1.0"
   }
 }
