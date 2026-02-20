@@ -1,16 +1,8 @@
 {
   "gallery": [
     {
-      "image": "/gallery/photo_10_2026-02-19_20-24-59.jpg",
-      "caption": "Lets party • Bunker immersive experience "
-    },
-    {
-      "image": "/gallery/photo_8_2026-02-19_20-24-59.jpg",
-      "caption": "Lets party • Bunker immersive experience "
-    },
-    {
-      "image": "/gallery/photo_5_2026-02-19_20-24-59.jpg",
-      "caption": "Lets party • Bunker immersive experience "
+      "image": "/gallery/IMG_5518.jpeg",
+      "caption": "Let’s Party • Dynasty events"
     },
     {
       "image": "/gallery/IMG_9359.jpeg",
@@ -21,7 +13,20 @@
       "caption": "Party Mafia • Valentine’s Day edition"
     },
     {
-      "image": "/gallery/IMG_5518.jpeg"
+      "image": "/gallery/photo_10_2026-02-19_20-24-59.jpg",
+      "caption": "Lets party • Bunker immersive experience "
+    },
+    {
+      "image": "/gallery/4.jpg",
+      "caption": "Lets party • Bunker immersive experience "
+    },
+    {
+      "image": "/gallery/photo_5_2026-02-19_20-24-59.jpg",
+      "caption": "Lets party • Bunker immersive experience "
+    },
+    {
+      "image": "/gallery/IMG_8218.jpeg",
+      "caption": "Party Mafia • New Year celebration "
     }
   ]
 }
