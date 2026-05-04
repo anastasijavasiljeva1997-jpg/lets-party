@@ -18,6 +18,7 @@ const SELECTORS = {
   announcements: '[data-announcements]',
   announcementsSlider: '.announcements__slider',
   announcementsWrapper: '.announcements__wrapper',
+  announcementImage: '.announcement-card__img',
   gallerySlider: '.gallery__slider',
   galleryWrapper: '#gallery-wrapper',
   galleryImage: '.gallery__slide-img',
@@ -170,8 +171,8 @@ function initCurrentYear() {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
-function markPortraitImages(root) {
-  const images = qsa(SELECTORS.galleryImage, root);
+function markPortraitImages(root, selector = SELECTORS.galleryImage) {
+  const images = qsa(selector, root);
 
   images.forEach((image) => {
     const applyOrientationClass = () => {
@@ -216,13 +217,21 @@ function createAnnouncementSlide(item, options = {}) {
   const media = document.createElement('div');
   media.className = 'announcement-card__media';
 
+  const backgroundImage = document.createElement('img');
+  backgroundImage.className = 'announcement-card__bg';
+  backgroundImage.src = item.image;
+  backgroundImage.alt = '';
+  backgroundImage.setAttribute('aria-hidden', 'true');
+  backgroundImage.loading = 'lazy';
+  backgroundImage.decoding = 'async';
+
   const image = document.createElement('img');
   image.className = 'announcement-card__img';
   image.src = item.image;
   image.alt = options.imageAlt || 'Let’s Party event announcement';
   image.loading = 'lazy';
   image.decoding = 'async';
-  media.append(image);
+  media.append(backgroundImage, image);
 
   const body = document.createElement('div');
   body.className = 'announcement-card__body';
@@ -288,6 +297,7 @@ async function initAnnouncements() {
         createAnnouncementSlide(item, { locale, imageAlt }),
       ),
     );
+    markPortraitImages(wrapper, SELECTORS.announcementImage);
     section.hidden = false;
 
     new Swiper(sliderEl, {
